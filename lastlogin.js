@@ -5,7 +5,7 @@ function updateLoginInfo() {
   var time = today.toLocaleTimeString();
   
   // Format the date and time string
-  var loginInfo = "Last login: " + date + " " + time + " from 127.0.0.1";
+  var loginInfo = "Last login: " + date + " " + time;
 
   // Get the element with id "login-info"
   var loginSpan = document.getElementById("login-info");
