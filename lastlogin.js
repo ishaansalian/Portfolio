@@ -10,8 +10,8 @@ function updateLoginInfo() {
   // Get the element with id "login-info"
   var loginSpan = document.getElementById("login-info");
 
-  // Update the content of the element
-  loginSpan.innerHTML = loginInfo;
+  // Update the text content of the element (without HTML tags)
+  loginSpan.textContent = loginInfo;
 }
 
 // Call the updateLoginInfo function on page load
