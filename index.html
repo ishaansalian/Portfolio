@@ -25,10 +25,19 @@
       text-indent: 0; /* Remove indentation */
     }
   </style>
+<p id="datetime"></p>
+<script>
+  // Get current date and time
+  var now = new Date();
+  var datetime = now.toLocaleString();
+
+  // Insert date and time into HTML
+  document.getElementById("datetime").innerHTML = datetime;
+</script>
 </head>
 <body>
-<script src="lastlogin.js"></script><span id="login-info" class="login-info"></span>
 <pre>
+  
   Welcome to Ishaan's Website!</p>
 
   <p><span>&#37;</span> cat About_Me.txt</p>
