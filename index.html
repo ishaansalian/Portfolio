@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Ishaan's Website</title>
   <style>
     body {
       font-family: monospace; /* Change font to monospace for a Linux terminal look */
@@ -21,26 +20,49 @@
       max-width: 700px; /* Adjust as needed for your content */
       white-space: pre-wrap; /* Allow content to wrap at word breaaks */
     }
-    .login-info {
-      text-indent: 0; /* Remove indentation */
+    p {
+     margin-bottom: -5px; /* Adjust as needed */
+     text-indent: 15px;
     }
   </style>
 <p id="datetime"></p>
 <script>
   // Get current date and time
   var now = new Date();
-  var datetime = now.toLocaleString();
+  var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var dayOfWeek = days[now.getDay()];
+  var month = months[now.getMonth()];
+  var day = now.getDate();
+  var year = now.getFullYear();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+
+  // Adjust hours to 12-hour format
+  hours = hours % 12;
+  hours = hours ? hours : 12; // Handle midnight (0 hours)
+
+  // Add leading zeros to minutes and seconds if less than 10
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+
+  // Construct the formatted date and time string
+  var datetime = dayOfWeek + ' ' + month + ' ' + day + ' ' + year + ' ' + hours + ':' + minutes + ':' + seconds + ' ' + ampm;
 
   // Insert date and time into HTML
-  document.getElementById("datetime").innerHTML = datetime;
+  document.getElementById("datetime").textContent = datetime;
 </script>
+
 </head>
 <body>
+    
 <pre>
   
   Welcome to Ishaan's Website!</p>
 
-  <p><span>&#37;</span> cat About_Me.txt</p>
+<p><span>&#37;</span> cat About_Me.txt</p>
   Passionate about Embedded Systems and Security Engineering. Proficient in Python, Java, and C, I aim to leverage my technical skills to tackle complex challenges and contribute to innovative solutions in the automotive sector.
 
   Experienced in project management and leadership, I specialize in creating inclusive environments that foster growth. My commitment extends to promoting diversity, equity, and empowerment in the automotive technology landscape.
@@ -48,13 +70,14 @@
   As a dedicated learner, I actively seek opportunities to enhance my expertise and make a positive impact. If you share an interest in embedded systems, security engineering, or the automotive industry, let's connect and explore potential collaborations. Together, we can drive meaningful change and success in this dynamic field.
 
 
-  <p>Feel Free to Explore any of the following:</p>
-  <nav><a href="Ishaan_Salian_Resume.pdf" target="_blank"><span>&#37;</span> cd Ishaan/Resume</a>
+<p>Feel Free to Explore any of the following:</p>
+<nav>
+  <a href="Ishaan_Salian_Resume.pdf" target="_blank"><span>&#37;</span> cd Ishaan/Resume</a>
   <a href="projects.html"><span>&#37;</span> cd Ishaan/Projects</a>
   <a href="https://www.linkedin.com/in/ishaan-salian-788a811b5/"><span>&#37;</span> cd Ishaan/LinkedIn</a>
 </nav>
 
-  <p><span>&#37;</span> cat Contact_Me.txt</p>
+<p><span>&#37;</span> cat Contact_Me.txt</p>
   <nav>email me at:<a href="mailto:isalian@umass.edu"> isalian@umass.edu </a>
 </nav>
 </pre>
