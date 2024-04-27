@@ -7,81 +7,70 @@
   <style>
     body {
       font-family: monospace; /* Change font to monospace for a Linux terminal look */
-      text-align: left;
+      text-align: left; /* Align text to the left */
       background-color: black; /* Set background color to black for a terminal feel */
       color: white; /* Set text color to white for better visibility */
+      margin: 0; /* Remove default margin */
+      padding: 20px; /* Add some padding */
     }
     /* Style for navigation links */
-    nav a {
+    a {
       color: white; /* Set text color to white */
       text-decoration: none; /* Remove underline */
     }
-    /* Limit the width of the content area */
-    .container {
-      max-width: 700px; /* Adjust as needed for your content */
-      margin: 0 auto; /* Center the content */
-      padding: 20px; /* Add some padding */
-    }
-    .project {
-      margin-bottom: 30px; /* Add space between projects */
-    }
-    .project img {
+    /* Style for project images */
+    img {
+      margin-left: 45px;
       max-width: 100%; /* Ensure images don't exceed container width */
       margin-bottom: 10px; /* Add space below images */
+    }
+    /* Style for project descriptions */
+    .description {
+      margin-bottom: 10px; /* Add space below description */
+    }
+    /* Style for project links */
+
+    p{
+        margin-left: 45px;
+        margin-bottom: -5px;
+    }
+    p1{
+        margin-left: 45px;
+        margin-bottom: 0px;
+    }
+    .dashed-2 {
+        border: none;
+        height: 1px;
+        background: #000;
+        background: repeating-linear-gradient(90deg,#FFF,#FFF 6px,transparent 6px,transparent 12px);
     }
   </style>
 </head>
 <body>
+<script src="lastlogin.js"></script><span id="login-info" class="login-info"></span>
+<pre>
+<p>Ishaan's Projects</p>
 
-<div class="container">
-  <h1>Ishaan's Projects</h1>
-
-  <div class="project">
-    <h2>Project 1</h2>
-    <img src="project1.jpg" alt="Project 1 Image">
-    <p>Description:</p>
-    <ul>
-      <li>Bulleted point 1</li>
-      <li>Bulleted point 2</li>
-      <li>Bulleted point 3</li>
-    </ul>
-    <!-- Add links to GitHub/YouTube -->
+<p>2024</p>
+<p>Project 1:</p>
+<img src="project1.jpg" alt="Project 1 Image">
+<p>Description:</p>
+<p>Bulleted point 1</p>
+<p>Bulleted point 2</p>
+<p>Bulleted point 3</p>
     <p>Links:</p>
-    <ul>
-      <li><a href="https://github.com/project1">GitHub</a></li>
-      <li><a href="https://www.youtube.com/project1">YouTube</a></li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h2>Project 2</h2>
-    <img src="project2.jpg" alt="Project 2 Image">
-    <p>Description:</p>
-    <p>Non-bulleted description text goes here.</p>
-    <!-- Add links to GitHub/YouTube -->
+<nav><p1><a href="https://github.com/project1">GitHub</a></p1>
+<p1><a href="https://www.youtube.com/project1">YouTube</a></p1>
+    </nav>
+<hr class="dashed-2">
+<p>2023</p>
+<p>Project 2:</p>
+<img src="project1.jpg" alt="Project 2 Image">
+<p>Description:</p>
+<p>Bulleted point 1</p>
+<p>Bulleted point 2</p>
+<p>Bulleted point 3</p>
     <p>Links:</p>
-    <ul>
-      <li><a href="https://github.com/project2">GitHub</a></li>
-      <li><a href="https://www.youtube.com/project2">YouTube</a></li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h2>Project 3</h2>
-    <img src="project3.jpg" alt="Project 3 Image">
-    <p>Description:</p>
-    <ul>
-      <li>Bulleted point 1</li>
-      <li>Bulleted point 2</li>
-    </ul>
-    <!-- Add links to GitHub/YouTube -->
-    <p>Links:</p>
-    <ul>
-      <li><a href="https://github.com/project3">GitHub</a></li>
-      <li><a href="https://www.youtube.com/project3">YouTube</a></li>
-    </ul>
-  </div>
-</div>
-
-</body>
-</html>
+<nav><p1><a href="https://github.com/project2">GitHub</a></p1>
+<p1><a href="https://www.youtube.com/project2">YouTube</a></p1>
+    </nav>
