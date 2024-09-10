@@ -1,176 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ishaan's Projects</title>
-  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-  <link rel="manifest" href="Images/site.webmanifest">
-  <style>
-    body {
-      font-family: monospace; /* Change font to monospace for a Linux terminal look */
-      text-align: left; /* Align text to the left */
-      background-color: black; /* Set background color to black for a terminal feel */
-      color: white; /* Set text color to white for better visibility */
-      margin: 0; /* Remove default margin */
-      padding: 20px; /* Add some padding */
-      font-size: 15px; /* Adjust this value to increase/decrease font size */
-    }
-    /* Style for navigation links */
-    a {
-      color: white; /* Set text color to white */
-      text-decoration: none; /* Remove underline */
-    }
-    /* Style for project images */
-    img {
-      margin-left: 0px;
-      max-width: 350px; /* Adjust as needed for your desired size */
-      margin-bottom: 10px; /* Add space below images */
-    }
-    pre {
-      max-width: 650px; /* Adjust as needed for your content */
-      white-space: pre-wrap; /* Allow content to wrap at word breaaks */
-    }
-    /* Style for project links */
-    p{
-        margin-left: 0px;
-        margin-bottom: -5px;
-    }
-    p1{
-        margin-left: 0px;
-        margin-bottom: 0px;
-        margin-top: -5px;
-    }
-    .dashed-2 {
-        border: none;
-        height: 1px;
-        background: #000;
-        background: repeating-linear-gradient(90deg,#FFF,#FFF 6px,transparent 6px,transparent 12px);
-    }
-    footer {
-      margin-top: auto;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-<script src="lastlogin.js"></script><span id="login-info" class="login-info"></span>
-<pre>
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-<p1><a href="https://ishaansalian.github.io/Portfolio/"><span>&#37;</span> cd ..</a></p1>
-  <p><strong>Here you can see the innovative projects I've worked on, showcasing my skills in hardware design, embedded systems, and software development.</strong></p>
-  <p><strong>2024</strong></p>
-  <p><strong>TinyTemp - Digital Thermometer</strong></p>
-<img src="Images/tinytemp2.jpg" alt="Project 1 Image">
-<p>  In this project, I designed a compact PCB using KiCad, achieving a 33% size reduction with a sleek 2-square-inch design.
-  
-  I implemented power-saving algorithms in embedded C, optimizing the system to sample temperature values only when necessary.
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Home</a> 
+				<nav>
+					<ul>
+						<li><a href="projects.html" class="active">Projects</a></li>
+						<li><a href="experience.html">Experience</a></li>
+                        <li><a href="Ishaan_Salian_Resume.pdf">Résumé</a></li>
+					</ul>
+				</nav>
+			</header> 
 
-  The project was completed at 76% of the cost requirements, showcasing my ability to manage resources effectively and meet budget constraints.</p>
-<p>PCB Layout:</p>
-<img src="Images/tinytemp.jpg" alt="Project 1 Image">
+		<!-- Sidebar 
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Who I am</a></li>
+							<li><a href="#two">What I've done</a></li>
+							<li><a href="#three">What I'm good at</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section> -->
+<!-- One -->
+<div id="wrapper">
+	<section id="main" class="wrapper">
+    <div class="inner">
+        <h1 class="major">My Projects</h1>
+    </div>
+	</section>
+</div>
+	<section id="one" class="wrapper style2 spotlights">
+    <section>
+        <a class="image"><img src="images/tinytemp2.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>TinyTemp - Digital Thermometer</h2>
+                <h5>In this project, I designed a compact PCB using KiCad, achieving a 33% size reduction with a sleek 2-square-inch design. I implemented power-saving algorithms in embedded C, optimizing the system to sample temperature values only when necessary. The project was completed at 76% of the cost requirements, showcasing my ability to manage resources effectively and meet budget constraints.</h5>
+                <br>
+                <h3>Links:</h3>
+						<ul class="icons">
+							<li><a href="https://devpost.com/software/travel-time-r5mp2g" class="icon fa-code"><span class="label">Devpost</span></a></li>
+							<li><a href="https://github.com/ishaansalian/TravelTime" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						</ul>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <a class="image"><img src="images/project1.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>TravelTime, Real-time Bus Information Display</h2>
+                <h5>I developed a system that provides real-time transit information by utilizing a public transit API. The project involved integrating an Arduino Mega and ESP8266 using serial communication for accurate bus updates. I implemented 7-segment displays for timing and an LCD screen to clearly present bus information, ensuring easy and quick access to real-time updates.</h5>
+                <br>
+                <h3>Links:</h3>
+                <ul class="icons">
+                    <li><a href="https://devpost.com/software/travel-time-r5mp2g" class="icon fa-code"><span class="label">Devpost</span></a></li>
+                    <li><a href="https://github.com/ishaansalian/TravelTime" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <a class="image"><img src="images/keyring.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>keyRING, a Smart Key Holder</h2>
+                <h5>As part of the keyRING project, I designed a system that senses keys using a spring-like mechanical switch and a sonar sensor to detect door movement. I programmed the ATmega328P in C to communicate with the switch for key detection using interrupts. This cost-effective design earned the "Cheapest Hardware Hack" award while achieving all project goals.</h5>
+                <br>
+                <h3>Links:</h3>
+						<ul class="icons">
+							<li><a href="https://devpost.com/software/keyring" class="icon fa-code"><span class="label">Devpost</span></a></li>
+							<li><a href="https://github.com/ishaansalian/keyRING" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://youtu.be/JUcyqoqNcMM" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+						</ul>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <a class="image"><img src="images/tempterature-sensor.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>Digital Thermometer System</h2>
+                <h5>For this project, I created a digital thermometer using an Arduino Uno microcontroller, a TMP36 temperature sensor, and a 7-segment display. I developed an embedded C program to display temperature readings in either Celsius or Fahrenheit, depending on the position of a push-button switch. The system was designed to show temperature with a precision of 0.1 degrees, followed by the letter 'C' or 'F.'</h5>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <a class="image"><img src="images/distance-sensor.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>Ultrasound-based Distance Measurement System</h2>
+                <h5>I developed an ultrasound-based distance measurement system using the HC-SR04 sensor to measure object distances ranging from 5 cm to 200 cm. I programmed the ATmega328P MCU on an Arduino Uno in Embedded C to calculate distances based on the time taken by ultrasound waves to bounce back from objects. The system featured a 0.96" OLED display with a resolution of 128x64 pixels to show distance measurements in both centimeters and inches, achieving an accuracy of 1 cm.</h5>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <a class="image"><img src="images/email-spam.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>Email Spam Detection</h2>
+                <h5>In this project, I developed a spam email classifier using Python and the Naive Bayes algorithm. I trained the model on a labeled dataset of spam and non-spam emails and successfully applied it to classify new, unseen emails. The classifier achieved a 94.1% accuracy rate in identifying spam emails.</h5>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <a class="image"><img src="images/hr-sorter.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>HR Sorter for Resumes</h2>
+                <h5>I developed a bash script designed to automate the sorting of resumes based on predefined keywords and weights. The solution was implemented using bash scripting and various Unix/Linux command-line tools such as ls, echo, awk, cat, grep, sort, wc, bc, and rm. The script successfully sorted resumes, demonstrating its effectiveness in automating the process.</h5>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <a class="image"><img src="images/baseball-tracjectory.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>Decoding a Baseball's Flight Path</h2>
+                <h5>I analyzed the flight path of a baseball using numerical techniques in MATLAB to determine key parameters. I developed and validated a numerical method to compute the baseball's trajectory and compared the results to analytic solutions. The project involved identifying the impact of air resistance and efficiently incorporating drag into the model, with results visualized through informative plots.</h5>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <a class="image"><img src="images/code-locker.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>Designing an Efficient Database</h2>
+                <h5>I designed an efficient dictionary database in Python, implementing basic sorting and searching algorithms. The project included creating various applications such as word searching, spell checking, finding anagrams, creating a Scrabble helper tool, and cracking a code locker.</h5>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <a class="image"><img src="images/KIM-1.jpg" alt="" data-position="center center" /></a>
+        <div class="content">
+            <div class="inner">
+                <h2>KIM-1 Servo-Based Valve Control Project</h2>
+                <h5>I developed a servo-based valve control system for a KIM-1 (6502-based single-board computer), enhancing the system's functionality and automation capabilities. Through this project, I gained proficiency in assembly language programming and applied my knowledge of control systems to design and implement precise servo motor control algorithms.</h5>
+            </div>
+        </div>
+    </section>
+</section>
 
-- -
-  <p><strong>TravelTime, Real-time Bus Information Display</strong></p>
-<img src="Images/project1.jpg" alt="Project 1 Image">
-<p>  I developed a system that provides real-time transit information by utilizing a public transit API.
+			
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
 
-  The project involved integrating an Arduino Mega and ESP8266 using serial communication for accurate bus updates. 
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-  I implemented 7-segment displays for timing and an LCD screen to clearly present bus information, ensuring easy and quick access to real-time updates.</p>
-<p>Links:</p>
-<nav><p1><a href="https://github.com/ishaansalian/TravelTime">GitHub</a></p1>
-<p1><a href="https://devpost.com/software/travel-time-r5mp2g">DevPost</a></p1></nav>
-</pre>
-<hr class="dashed-2">
-<pre>
-  <p><strong>2023</strong></p>
-  <p><strong>keyRING, a Smart Key Holder</strong></p>
-<img src="Images/keyring.jpg" alt="Project 1 Image">
-<p>  As part of the keyRING project, I designed a system that senses keys using a spring-like mechanical switch and a sonar sensor to detect door movement.
-
-  I programmed the ATmega328P in C to communicate with the switch for key detection using interrupts.
-
-  This cost-effective design earned the "Cheapest Hardware Hack" award while achieving all project goals.</p>
-<p>Links:</p>
-<nav><p1><a href="https://github.com/ishaansalian/keyRING">GitHub</a></p1>
-<p1><a href="https://youtu.be/JUcyqoqNcMM">YouTube</a></p1>
-<p1><a href="https://devpost.com/software/keyring">DevPost</a></p1></nav>
-
-- -
-  <p><strong>Digital Thermometer System</strong></p>
-<img src="Images/tempterature-sensor.jpg" alt="Project 1 Image">
-<p>  For this project, I created a digital thermometer using an Arduino Uno microcontroller, a TMP36 temperature sensor, and a 7-segment display.
-
-  I developed an embedded C program to display temperature readings in either Celsius or Fahrenheit, depending on the position of a push-button switch.
-
-  The system was designed to show temperature with a precision of 0.1 degrees, followed by the letter 'C' or 'F.'</p>
-
-- -
-  <p><strong>Ultrasound-based Distance Measurement System</strong></p>
-<img src="Images/distance-sensor.jpg" alt="Project 2 Image">
-<p>  I developed an ultrasound-based distance measurement system using the HC-SR04 sensor to measure object distances ranging from 5 cm to 200 cm.
-
-  I programmed the ATmega328P MCU on an Arduino Uno in Embedded C to calculate distances based on the time taken by ultrasound waves to bounce back from objects.
-
-  The system featured a 0.96" OLED display with a resolution of 128x64 pixels to show distance measurements in both centimeters and inches, achieving an accuracy of 1 cm.</p>
-
-- -
-  <p><strong>Email Spam Detection</strong></p>
-<img src="Images/email-spam.jpg" alt="Project 2 Image">
-<p>  In this project, I developed a spam email classifier using Python and the Naive Bayes algorithm.
-
-  I trained the model on a labeled dataset of spam and non-spam emails and successfully applied it to classify new, unseen emails.
-
-  The classifier achieved a 94.1% accuracy rate in identifying spam emails.</p>
-
-- -
-  <p><strong>HR Sorter for Resumes</strong></p>
-<img src="Images/hr-sorter.jpg" alt="Project 2 Image">
-<p>  I developed a bash script designed to automate the sorting of resumes based on predefined keywords and weights.
-
-  The solution was implemented using bash scripting and various Unix/Linux command-line tools such as ls, echo, awk, cat, grep, sort, wc, bc, and rm.
-
-  The script successfully sorted resumes, demonstrating its effectiveness in automating the process.</p>
-
-</pre>
-<hr class="dashed-2">
-<pre>
-  <p><strong>2022</strong></p>
-  <p><strong>Decoding a Baseball's Flight Path</strong></p>
-<img src="Images/baseball-tracjectory.jpg" alt="Project 2 Image">
-<p>  I analyzed the flight path of a baseball using numerical techniques in MATLAB to determine key parameters.
-
-  I developed and validated a numerical method to compute the baseball's trajectory and compared the results to analytic solutions.
-
-  The project involved identifying the impact of air resistance and efficiently incorporating drag into the model, with results visualized through informative plots.</p>
-
-- -
-  <p><strong>Designing an Efficient Database</strong></p>
-<img src="Images/code-locker.jpg" alt="Project 2 Image">
-<p>  I designed an efficient dictionary database in Python, implementing basic sorting and searching algorithms.
-
-  The project included creating various applications such as word searching, spell checking, finding anagrams, creating a Scrabble helper tool, and cracking a code locker.</p>
-
-- -
-  <p><strong>Building a Movie Library</strong></p>
-<p>  In this project, I designed and operated a movie library using both lists and binary search trees in Python.
-
-  The binary search tree was used to store a large number of movies while maintaining fast insert and search times.
-
-  I also created a robust search functionality that allowed users to extract customized sublists or subtrees from the extensive movie database.</p>
-
-- -
-  <p><strong>KIM-1 Servo-Based Valve Control Project</strong></p>
-<img src="Images/KIM-1.jpg" alt="Project 2 Image">
-<p>  I developed a servo-based valve control system for a KIM-1 (6502-based single-board computer), enhancing the system's functionality and automation capabilities.
-
-  Through this project, I gained proficiency in assembly language programming and applied my knowledge of control systems to design and implement precise servo motor control algorithms.</p>
-
-</pre>
-<hr class="dashed-2">
-<footer>
-<p>👾 Created by Ishaan Salian 👾</p>
-</footer>
-</body>
+	</body>
 </html>
