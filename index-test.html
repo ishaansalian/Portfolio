@@ -29,7 +29,7 @@
 
 			.modal-content {
 				position: relative;
-				background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3a 100%);
+				background: rgba(0, 0, 0, 0.8);
 				margin: 5% auto;
 				padding: 0;
 				border-radius: 15px;
@@ -44,8 +44,8 @@
 
 			.modal-header {
 				padding: 30px 30px 20px 30px;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-				background: rgba(255, 255, 255, 0.05);
+				border-bottom: 1px solid rgb(255, 255, 255);
+				background: rgba(0, 0, 0);
 				border-radius: 15px 15px 0 0;
 			}
 
@@ -53,15 +53,15 @@
 				margin: 0;
 				color: #fff;
 				font-size: 2em;
-				background: linear-gradient(45deg, #6a5acd, #4169e1);
+				background: rgba(255, 255, 255);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				background-clip: text;
 			}
-			/* TODO: NEED TO EDIT COLORS FOR ALL MODALS, */
+			
 			.modal-body {
 				padding: 30px;
-				color: #e0e0e0;
+				color: #FFFFFF;
 				line-height: 1.6;
 			}
 
@@ -88,7 +88,7 @@
 
 			.close:hover,
 			.close:focus {
-				color: #ff6b6b;
+				color: #ffffff;
 				transform: rotate(90deg);
 			}
 
@@ -102,7 +102,7 @@
 			.project-links a {
 				display: inline-block;
 				padding: 12px 25px;
-				background: rgba(255, 255, 255, 0.05);
+				background: rgba(255, 255, 255);
 				color: white;
 				text-decoration: none;
 				border-radius: 25px;
@@ -122,7 +122,7 @@
 			}
 
 			.tech-stack h4 {
-				color: #6a5acd;
+				color: #FFFFFF;
 				margin-bottom: 10px;
 			}
 
@@ -133,12 +133,12 @@
 			}
 
 			.tech-tag {
-				background: rgba(106, 90, 205, 0.2);
-				color: #b19cd9;
+				background: rgba(0, 0, 0, 0.2);
+				color: #FFFFFF;
 				padding: 5px 12px;
 				border-radius: 20px;
 				font-size: 0.85em;
-				border: 1px solid rgba(106, 90, 205, 0.3);
+				border: 1px solid rgba(75, 75, 75);
 			}
 
 			@keyframes fadeIn {
@@ -267,7 +267,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Institute of Electrical and Electronics Engineers, UMass Chapter</h2>
-									<h3>Liaison (Active)</h3>
+									<h3>Liaison</h3>
 								</div>
 							</div>
 						</section>
@@ -376,9 +376,10 @@
 				</div>
 				<div class="modal-body">
 					<img src="images/sdp.jpg" alt="Workspace Wizard Project">
+					<img src="images/sdp1.jpg" alt="Workspace Wizard Project">
 					<p><strong>Senior Design Project</strong></p>
-					<p>An intelligent workspace management system that optimizes office environments through IoT sensors and machine learning algorithms. The system monitors occupancy, temperature, lighting, and air quality to create the perfect working environment.</p>
-					
+					<p>As the Logistics and Hardware Lead for the Workspace Wizard project, I am responsible for overseeing the integration of various hardware components and ensuring the effective communication between the robot, overhead camera, and charging station. My role involves coordinating logistics to optimize the placement and accessibility of components, which is crucial for the project's overall efficiency. I am currently developing a robust PCB prototype that facilitates reliable Bluetooth communication and precise motor control, enabling the robot to autonomously organize the workspace. Through careful planning and implementation, I am driving the progress of our autonomous desk organization system, ensuring it meets functional specifications while adhering to project timelines.</p>
+
 					<h4>Key Features:</h4>
 					<ul>
 						<li>Real-time environmental monitoring</li>
@@ -387,28 +388,22 @@
 						<li>Energy consumption analytics</li>
 						<li>Mobile app for user preferences</li>
 					</ul>
-					
+					<!-- TODO: maybe remove this
 					<div class="tech-stack">
 						<h4>Technologies Used:</h4>
 						<div class="tech-tags">
-							<span class="tech-tag">Arduino</span>
+							<span class="tech-tag">Maybe remove this</span>
 							<span class="tech-tag">Python</span>
 							<span class="tech-tag">IoT Sensors</span>
 							<span class="tech-tag">Machine Learning</span>
 							<span class="tech-tag">React Native</span>
 							<span class="tech-tag">Firebase</span>
 						</div>
-					</div>
+					-->
 					<!-- TODO: NEED TO EDIT THIS FOR ALL MODALS-->
 					<ul class="actions fit">
-						<li><a href="#" target="_blank">View Code</a></li>
-						<li><a href="#" target="_blank">Live Demo</a></li>
-						<li><a href="#" target="_blank">Documentation</a></li>
-					</ul>
-					<ul class="actions fit">
-						<li><a href="mailto:isalian@umass.edu" class="button fit icon fa-envelope">Code</span></a></li>
-						<li><a href="https://www.linkedin.com/in/ishaan-salian/" class="button fit icon brands fa-linkedin">LinkedIn</span></a></li>
-						<li><a href="https://github.com/ishaansalian" class="button fit icon brands fa-github">Github</span></a></li>						
+						<li><a href="https://websites.umass.edu/ece-sdp/sdp25-team-15/" class="button fit icon fa-folder-open">Documentation</span></a></li>
+						<li><a href="https://drive.google.com/open?id=1K6Wf-U-DU9u5BgCfjpgWhyY3WK8aw3Z0&usp=drive_copy" class="button fit icon brands fa-youtube">Video</span></a></li>					
 					</ul>
 				</div>
 			</div>
@@ -435,7 +430,7 @@
 						<li>Compact form factor</li>
 					</ul>
 					
-					<div class="tech-stack">
+					<!---<div class="tech-stack">
 						<h4>Technologies Used:</h4>
 						<div class="tech-tags">
 							<span class="tech-tag">C/C++</span>
@@ -445,13 +440,7 @@
 							<span class="tech-tag">ESP32</span>
 							<span class="tech-tag">Sensors</span>
 						</div>
-					</div>
-					
-					<div class="project-links">
-						<a href="projects.html" target="_blank">View Details</a>
-						<a href="#" target="_blank">GitHub</a>
-						<a href="#" target="_blank">Schematic</a>
-					</div>
+					</div>--->
 				</div>
 			</div>
 		</div>
@@ -477,6 +466,7 @@
 						<li>Remote configuration capabilities</li>
 					</ul>
 					
+					<!--
 					<div class="tech-stack">
 						<h4>Technologies Used:</h4>
 						<div class="tech-tags">
@@ -488,12 +478,12 @@
 							<span class="tech-tag">Linux</span>
 						</div>
 					</div>
+					-->
 					
-					<div class="project-links">
-						<a href="#" target="_blank">View Code</a>
-						<a href="#" target="_blank">API Docs</a>
-						<a href="#" target="_blank">Installation Guide</a>
-					</div>
+					<ul class="actions fit">
+						<li><a href="https://devpost.com/software/travel-time-r5mp2g" class="button fit icon fa-code"><span class="label">Devpost</span></a></li>
+						<li><a href="https://github.com/ishaansalian/TravelTime" class="button fit icon brands fa-github"><span class="label">Github</span></a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
