@@ -1,0 +1,558 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Modal Styles */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 10000;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.8);
+				backdrop-filter: blur(5px);
+				animation: fadeIn 0.3s ease-out;
+			}
+
+			.modal-content {
+				position: relative;
+				background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3a 100%);
+				margin: 5% auto;
+				padding: 0;
+				border-radius: 15px;
+				width: 90%;
+				max-width: 800px;
+				max-height: 85vh;
+				overflow-y: auto;
+				box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+				animation: slideIn 0.3s ease-out;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			.modal-header {
+				padding: 30px 30px 20px 30px;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+				background: rgba(255, 255, 255, 0.05);
+				border-radius: 15px 15px 0 0;
+			}
+
+			.modal-header h2 {
+				margin: 0;
+				color: #fff;
+				font-size: 2em;
+				background: linear-gradient(45deg, #6a5acd, #4169e1);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+			/* TODO: NEED TO EDIT THIS FOR ALL MODALS */
+			.modal-body {
+				padding: 30px;
+				color: #e0e0e0;
+				line-height: 1.6;
+			}
+
+			.modal-body img {
+				width: 100%;
+				max-width: 400px;
+				height: auto;
+				border-radius: 10px;
+				margin: 20px 0;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+			}
+
+			.close {
+				position: absolute;
+				top: 15px;
+				right: 25px;
+				color: #aaa;
+				font-size: 35px;
+				font-weight: bold;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				z-index: 1;
+			}
+
+			.close:hover,
+			.close:focus {
+				color: #ff6b6b;
+				transform: rotate(90deg);
+			}
+
+			.project-links {
+				margin-top: 25px;
+				display: flex;
+				gap: 15px;
+				flex-wrap: wrap;
+			}
+
+			.project-links a {
+				display: inline-block;
+				padding: 12px 25px;
+				background: rgba(255, 255, 255, 0.05);
+				color: white;
+				text-decoration: none;
+				border-radius: 25px;
+				transition: all 0.3s ease;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: 0.9em;
+			}
+
+			.project-links a:hover {
+				background: rgba(255, 255, 255, 0.05);
+			}
+
+			.tech-stack {
+				margin-top: 20px;
+			}
+
+			.tech-stack h4 {
+				color: #6a5acd;
+				margin-bottom: 10px;
+			}
+
+			.tech-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+			}
+
+			.tech-tag {
+				background: rgba(106, 90, 205, 0.2);
+				color: #b19cd9;
+				padding: 5px 12px;
+				border-radius: 20px;
+				font-size: 0.85em;
+				border: 1px solid rgba(106, 90, 205, 0.3);
+			}
+
+			@keyframes fadeIn {
+				from { opacity: 0; }
+				to { opacity: 1; }
+			}
+
+			@keyframes slideIn {
+				from { 
+					opacity: 0;
+					transform: translateY(-50px) scale(0.95);
+				}
+				to { 
+					opacity: 1;
+					transform: translateY(0) scale(1);
+				}
+			}
+
+			/* Clickable project images */
+			.project-image {
+				cursor: pointer;
+			}
+
+			/* Responsive design */
+			@media (max-width: 768px) {
+				.modal-content {
+					width: 95%;
+					margin: 10% auto;
+				}
+				
+				.modal-header,
+				.modal-body {
+					padding: 20px;
+				}
+				
+				.modal-header h2 {
+					font-size: 1.5em;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Projects</a></li>
+							<li><a href="#two">Experience</a></li>
+							<li><a href="#three">Skills</a></li>
+							<li><a href="#four">Courses</a></li>
+							<li><a href="#five">Contact Me</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Hi, I'm Ishaan!</h1>
+							<p>Welcome to my corner of the web.</p>
+							<p>I'm a Computer Engineer with a passion for crafting innovative solutions at the intersection of hardware design, embedded systems, and software development. Whether it's building smart robots, streamlining systems, or experimenting with cutting-edge tech, I thrive on turning complex challenges into creative solutions.</p>
+							<p>Take a look at my projects, dive into my experiences, and if something sparks your curiosity, or if you just want to say hi, don't hesitate to reach out. I'd love to connect and hear your thoughts!</p>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<div class="inner">
+							<h2 class="major">Here are some of my Projects</h2>
+						</div>
+						<section>
+							<a class="image project-image" onclick="openModal('sdpModal')"><img src="images/sdp.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Workspace Wizard (Senior Design Project)</h2>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image project-image" onclick="openModal('tinytempModal')"><img src="images/tinytemp2.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>TinyTemp - Digital Thermometer</h2>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image project-image" onclick="openModal('traveltimeModal')"><img src="images/project1.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>TravelTime - Real-time Bus Information Display</h2>
+								</div>
+							</div>
+						</section>
+						
+						<div class="inner">
+							<ul class="actions fit">
+								<li><a href="projects.html" class="button fit">view more projects</a></li>
+							</ul>
+					</div>
+					</section>
+				
+				<!-- Two -->
+					<section id="two" class="wrapper style2 spotlights">
+						<div class="inner">
+							<h2 class="major">My Experiences</h2>
+						</div>
+						<section>
+							<a class="image"><img src="images/CoherentLogo.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Coherent Corp.</h2>
+									<h3>Controls/Electronics Engineer (Internship)</h3>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image"><img src="images/UmassIEEE.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Institute of Electrical and Electronics Engineers, UMass Chapter</h2>
+									<h3>Liaison (Active)</h3>
+								</div>
+							</div>
+						</section>
+						
+						<div class="inner">
+							<ul class="actions fit">
+								<li><a href="experience.html" class="button fit">view more Experiences</a></li>
+							</ul>
+					</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style2 spotlight">
+						<div class="inner">
+							<h2>What I'm good at</h2>
+							<div class="features">
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<p><strong>Programming Languages</strong></p>
+									<p>Python, C, C++, Java, MATLAB, Verilog, RISC-V, Assembly, HTML</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-microchip"></span>
+									<p><strong>Circuit Design and PCB Layout</strong></p>
+									<p>KiCad, Altium Designer</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-memory"></span>
+									<p><strong>Hardware</strong></p>
+									<p>PLC Programming, Arduino, BeagleBone, Bare-Metal Programming</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-lock"></span>
+									<p><strong>Cybersecurity</strong></p>
+									<p>Ghidra, Penetration testing</p>
+								</section>
+								<section>
+									<span class="icon major fa-car-battery"></span>
+									<p><strong>Tools</strong></p>
+									<p>Soldering, Multimeters, Oscilloscopes, Quartus Prime</p>
+								</section>
+								<section>
+									<span class="icon major fa-lightbulb"></span> 
+									<p><strong>Others</strong></p>
+									<p>Fusion 360, 3D Printing, Git, Shell</p>
+								</section>
+							</div>
+					</section>
+				
+				<!-- Four -->
+				<section id="four" class="wrapper style2 spotlight">
+					<div class="inner">
+						<h2>What I've Studied</h2>
+						<div class="features">
+							<section>
+								<span class="icon solid major fa-microchip"></span>
+								<p><strong>Embedded Systems</strong></p>
+								<p>Design Principles for Low Power Embedded Computer Systems, Networked Embedded System, Hardware Organization & Digital Design</p>
+								<p><em>Skills/Technologies:</em> Bare-metal programming, hardware-software co-design, Low-power design, real-time communication, network protocols (BLE, UDP)</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-brain"></span>
+								<p><strong>Artificial Intelligence and Data</strong></p>
+								<p>Artificial Intelligence, Advanced Programming (Data Structures and Analysis), Probability & Statistics</p>
+								<p><em>Skills/Technologies:</em> Python, TensorFlow, scikit-learn, data analysis, algorithm development</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-shield-alt"></span>
+								<p><strong>Cybersecurity</strong></p>
+								<p>Security Engineering, Reverse Engineering and Vulnerability Analysis</p>
+								<p><em>Skills/Technologies:</em> Ghidra, penetration testing, buffer overflow attacks, secure system design</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-drafting-compass"></span>
+								<p><strong>VLSI</strong></p>
+								<p>Synthesis & Verification of Digital Systems</p>
+								<p><em>Skills/Technologies:</em> Verilog, Quartus Prime, abc, Yosys</p>
+							</section>
+						</div>
+					</div>
+				</section>
+
+				<!-- Five -->
+					<section id="five" class="wrapper style2 spotlight">
+						<div class="inner">
+							<h2>Contact me</h2>
+							<ul class="actions fit">
+								<li><a href="mailto:isalian@umass.edu" class="button fit icon fa-envelope">Mail</span></a></li>
+								<li><a href="https://www.linkedin.com/in/ishaan-salian/" class="button fit icon brands fa-linkedin">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ishaansalian" class="button fit icon brands fa-github">Github</span></a></li>						
+							</ul>
+							<ul class="actions fit">
+								<li><a href="Ishaan_Salian_Resume.pdf" class="button icon solid fa-download">Résumé</a></li>
+							</ul>
+						</div>
+					</section>
+
+		<!-- Project Modals -->
+		
+		<!-- Workspace Wizard Modal -->
+		<div id="sdpModal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" onclick="closeModal('sdpModal')">&times;</span>
+					<h2>Workspace Wizard</h2>
+				</div>
+				<div class="modal-body">
+					<img src="images/sdp.jpg" alt="Workspace Wizard Project">
+					<p><strong>Senior Design Project</strong></p>
+					<p>An intelligent workspace management system that optimizes office environments through IoT sensors and machine learning algorithms. The system monitors occupancy, temperature, lighting, and air quality to create the perfect working environment.</p>
+					
+					<h4>Key Features:</h4>
+					<ul>
+						<li>Real-time environmental monitoring</li>
+						<li>Automated lighting and climate control</li>
+						<li>Occupancy detection and space optimization</li>
+						<li>Energy consumption analytics</li>
+						<li>Mobile app for user preferences</li>
+					</ul>
+					
+					<div class="tech-stack">
+						<h4>Technologies Used:</h4>
+						<div class="tech-tags">
+							<span class="tech-tag">Arduino</span>
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">IoT Sensors</span>
+							<span class="tech-tag">Machine Learning</span>
+							<span class="tech-tag">React Native</span>
+							<span class="tech-tag">Firebase</span>
+						</div>
+					</div>
+					<!-- TODO: NEED TO EDIT THIS FOR ALL MODALS-->
+					<ul class="actions fit">
+						<li><a href="#" target="_blank">View Code</a></li>
+						<li><a href="#" target="_blank">Live Demo</a></li>
+						<li><a href="#" target="_blank">Documentation</a></li>
+					</ul>
+					<ul class="actions fit">
+						<li><a href="mailto:isalian@umass.edu" class="button fit icon fa-envelope">Code</span></a></li>
+						<li><a href="https://www.linkedin.com/in/ishaan-salian/" class="button fit icon brands fa-linkedin">LinkedIn</span></a></li>
+						<li><a href="https://github.com/ishaansalian" class="button fit icon brands fa-github">Github</span></a></li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- TinyTemp Modal -->
+		<div id="tinytempModal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" onclick="closeModal('tinytempModal')">&times;</span>
+					<h2>TinyTemp - Digital Thermometer</h2>
+				</div>
+				<div class="modal-body">
+					<img src="images/tinytemp2.jpg" alt="TinyTemp Digital Thermometer">
+					<p>A compact, high-precision digital thermometer designed for embedded applications. Features a custom PCB design, temperature logging capabilities, and wireless connectivity for remote monitoring.</p>
+					
+					<h4>Key Features:</h4>
+					<ul>
+						<li>±0.1°C temperature accuracy</li>
+						<li>LCD display with backlight</li>
+						<li>Data logging to SD card</li>
+						<li>Wireless data transmission</li>
+						<li>Battery-powered with sleep modes</li>
+						<li>Compact form factor</li>
+					</ul>
+					
+					<div class="tech-stack">
+						<h4>Technologies Used:</h4>
+						<div class="tech-tags">
+							<span class="tech-tag">C/C++</span>
+							<span class="tech-tag">Arduino</span>
+							<span class="tech-tag">KiCad</span>
+							<span class="tech-tag">PCB Design</span>
+							<span class="tech-tag">ESP32</span>
+							<span class="tech-tag">Sensors</span>
+						</div>
+					</div>
+					
+					<div class="project-links">
+						<a href="projects.html" target="_blank">View Details</a>
+						<a href="#" target="_blank">GitHub</a>
+						<a href="#" target="_blank">Schematic</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- TravelTime Modal -->
+		<div id="traveltimeModal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" onclick="closeModal('traveltimeModal')">&times;</span>
+					<h2>TravelTime - Real-time Bus Information</h2>
+				</div>
+				<div class="modal-body">
+					<img src="images/project1.jpg" alt="TravelTime Bus Information Display">
+					<p>A real-time bus information display system that provides live arrival times, route information, and service alerts for public transportation. Designed for bus stops and transit stations.</p>
+					
+					<h4>Key Features:</h4>
+					<ul>
+						<li>Live bus arrival predictions</li>
+						<li>Multiple route monitoring</li>
+						<li>Service alerts and notifications</li>
+						<li>Weather-resistant outdoor display</li>
+						<li>Solar-powered operation</li>
+						<li>Remote configuration capabilities</li>
+					</ul>
+					
+					<div class="tech-stack">
+						<h4>Technologies Used:</h4>
+						<div class="tech-tags">
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">Raspberry Pi</span>
+							<span class="tech-tag">API Integration</span>
+							<span class="tech-tag">LCD Display</span>
+							<span class="tech-tag">Solar Power</span>
+							<span class="tech-tag">Linux</span>
+						</div>
+					</div>
+					
+					<div class="project-links">
+						<a href="#" target="_blank">View Code</a>
+						<a href="#" target="_blank">API Docs</a>
+						<a href="#" target="_blank">Installation Guide</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<!-- Modal Scripts -->
+			<script>
+				function openModal(modalId) {
+					document.getElementById(modalId).style.display = "block";
+					document.body.style.overflow = "hidden"; // Prevent background scrolling
+				}
+
+				function closeModal(modalId) {
+					document.getElementById(modalId).style.display = "none";
+					document.body.style.overflow = "auto"; // Restore scrolling
+				}
+
+				// Close modal when clicking outside of it
+				window.onclick = function(event) {
+					const modals = document.getElementsByClassName('modal');
+					for (let i = 0; i < modals.length; i++) {
+						if (event.target === modals[i]) {
+							modals[i].style.display = "none";
+							document.body.style.overflow = "auto";
+						}
+					}
+				}
+
+				// Close modal with Escape key
+				document.addEventListener('keydown', function(event) {
+					if (event.key === 'Escape') {
+						const modals = document.getElementsByClassName('modal');
+						for (let i = 0; i < modals.length; i++) {
+							if (modals[i].style.display === "block") {
+								modals[i].style.display = "none";
+								document.body.style.overflow = "auto";
+								break;
+							}
+						}
+					}
+				});
+			</script>
+
+	</body>
+</html>
