@@ -28,20 +28,42 @@
 				animation: fadeIn 0.3s ease-out;
 			}
 
-			.modal-content {
-				position: relative;
-				background: rgba(0, 0, 0, 0.8);
-				margin: 5% auto;
-				padding: 0;
-				border-radius: 15px;
-				width: 90%;
-				max-width: 800px;
-				max-height: 85vh;
-				overflow-y: auto;
-				box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-				animation: slideIn 0.3s ease-out;
-				border: 1px solid rgba(255, 255, 255, 0.1);
-			}
+			/* Add this to your existing modal CSS */
+            .modal-content {
+                position: relative;
+                background: #000;
+                margin: 5% auto;
+                padding: 0;
+                border-radius: 15px;
+                width: 90%;
+                max-width: 800px;
+                max-height: 85vh;
+                overflow-x: hidden; /* Add this line */
+                overflow-y: auto;
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+                animation: slideIn 0.3s ease-out;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin: 20px 0;
+                overflow: hidden; /* Add this line */
+            }
+
+            .image-container img {
+                max-width: 100%; /* Change from 400px to 100% */
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                flex: 0 0 auto;
+                object-fit: contain; /* Add this line */
+            }
 
 			.modal-header {
 				padding: 30px 30px 20px 30px;
@@ -139,22 +161,28 @@
 				cursor: pointer;
 			}
 
-			/* Responsive design */
-			@media (max-width: 768px) {
-				.modal-content {
-					width: 95%;
-					margin: 10% auto;
-				}
-				
-				.modal-header,
-				.modal-body {
-					padding: 20px;
-				}
-				
-				.modal-header h2 {
-					font-size: 1.5em;
-				}
-			}
+            /* Update mobile styles */
+            @media (max-width: 768px) {
+                .modal-content {
+                    width: 95%;
+                    margin: 10% auto;
+                }
+                
+                .modal-header,
+                .modal-body {
+                    padding: 20px;
+                }
+                
+                .image-container {
+                    flex-direction: column;
+                    margin: 10px 0;
+                }
+                
+                .image-container img {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
 		</style>
 	</head>
 
@@ -372,7 +400,6 @@
 						<li><a href="https://websites.umass.edu/ece-sdp/sdp25-team-15/" class="button fit fa-solid fa-folder-open">Documentation</a></li>
 						<li><a href="https://drive.google.com/open?id=1K6Wf-U-DU9u5BgCfjpgWhyY3WK8aw3Z0&usp=drive_copy" class="button fit icon fa-solid brands fa-youtube">Video</a></li>					
 					</ul>
-					
 					<ul class="actions fit">
 						<li><a href="projects.html" class="button fit">view more projects</a></li>
 					</ul>
