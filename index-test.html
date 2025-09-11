@@ -11,6 +11,7 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			/* Modal Styles */
@@ -61,15 +62,15 @@
 			
 			.modal-body {
 				padding: 30px;
-				color: #FFFFFF;
+				color: #e0e0e0;
 				line-height: 1.6;
 			}
-
+			
 			.modal-body img {
-				width: 100%;
+				width: auto;
 				max-width: 400px;
 				height: auto;
-				border-radius: 10px;
+				border-radius: 0px;
 				margin: 20px 0;
 				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 			}
@@ -78,7 +79,7 @@
 				position: absolute;
 				top: 15px;
 				right: 25px;
-				color: #aaa;
+				color: rgba(255, 255, 255, 0.4);
 				font-size: 35px;
 				font-weight: bold;
 				cursor: pointer;
@@ -115,30 +116,6 @@
 
 			.project-links a:hover {
 				background: rgba(255, 255, 255, 0.05);
-			}
-
-			.tech-stack {
-				margin-top: 20px;
-			}
-
-			.tech-stack h4 {
-				color: #FFFFFF;
-				margin-bottom: 10px;
-			}
-
-			.tech-tags {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 8px;
-			}
-
-			.tech-tag {
-				background: rgba(0, 0, 0, 0.2);
-				color: #FFFFFF;
-				padding: 5px 12px;
-				border-radius: 20px;
-				font-size: 0.85em;
-				border: 1px solid rgba(75, 75, 75);
 			}
 
 			@keyframes fadeIn {
@@ -225,28 +202,28 @@
 							</div>
 						</section>
 						<section>
-							<a class="image project-image" onclick="openModal('tinytempModal')"><img src="images/tinytemp2.jpg" alt="" data-position="center center" /></a>
+							<a class="image project-image" onclick="openModal('keyRingModal')"><img src="images/keyring.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>TinyTemp - Digital Thermometer</h2>
+									<h2>keyRING - Smart Key Holder</h2>
 								</div>
 							</div>
 						</section>
+
 						<section>
-							<a class="image project-image" onclick="openModal('traveltimeModal')"><img src="images/project1.jpg" alt="" data-position="center center" /></a>
+							<a class="image project-image" onclick="openModal('CampusCompassModal')"><img src="images/CampusCompass.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>TravelTime - Real-time Bus Information Display</h2>
+									<h2>Campus Compass - Intelligent Meal Recommendation System</h2>
 								</div>
 							</div>
 						</section>
-						
 						<div class="inner">
 							<ul class="actions fit">
 								<li><a href="projects.html" class="button fit">view more projects</a></li>
 							</ul>
 					</div>
-					</section>
+				</section>
 				
 				<!-- Two -->
 					<section id="two" class="wrapper style2 spotlights">
@@ -285,32 +262,32 @@
 							<h2>What I'm good at</h2>
 							<div class="features">
 								<section>
-									<span class="icon solid major fa-code"></span>
+									<span class="icon fa-solid major fa-code"></span>
 									<p><strong>Programming Languages</strong></p>
 									<p>Python, C, C++, Java, MATLAB, Verilog, RISC-V, Assembly, HTML</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-microchip"></span>
+									<span class="icon fa-solid major fa-microchip"></span>
 									<p><strong>Circuit Design and PCB Layout</strong></p>
 									<p>KiCad, Altium Designer</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-memory"></span>
+									<span class="icon fa-solid major fa-memory"></span>
 									<p><strong>Hardware</strong></p>
 									<p>PLC Programming, Arduino, BeagleBone, Bare-Metal Programming</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-lock"></span>
+									<span class="icon fa-solid major fa-lock"></span>
 									<p><strong>Cybersecurity</strong></p>
 									<p>Ghidra, Penetration testing</p>
 								</section>
 								<section>
-									<span class="icon major fa-car-battery"></span>
+									<span class="icon major fa-solid fa-car-battery"></span>
 									<p><strong>Tools</strong></p>
 									<p>Soldering, Multimeters, Oscilloscopes, Quartus Prime</p>
 								</section>
 								<section>
-									<span class="icon major fa-lightbulb"></span> 
+									<span class="icon fa-solid major fa-lightbulb"></span> 
 									<p><strong>Others</strong></p>
 									<p>Fusion 360, 3D Printing, Git, Shell</p>
 								</section>
@@ -323,25 +300,25 @@
 						<h2>What I've Studied</h2>
 						<div class="features">
 							<section>
-								<span class="icon solid major fa-microchip"></span>
+								<span class="icon fa-solid major fa-microchip"></span>
 								<p><strong>Embedded Systems</strong></p>
 								<p>Design Principles for Low Power Embedded Computer Systems, Networked Embedded System, Hardware Organization & Digital Design</p>
 								<p><em>Skills/Technologies:</em> Bare-metal programming, hardware-software co-design, Low-power design, real-time communication, network protocols (BLE, UDP)</p>
 							</section>
 							<section>
-								<span class="icon solid major fa-brain"></span>
+								<span class="icon fa-solid major fa-brain"></span>
 								<p><strong>Artificial Intelligence and Data</strong></p>
 								<p>Artificial Intelligence, Advanced Programming (Data Structures and Analysis), Probability & Statistics</p>
 								<p><em>Skills/Technologies:</em> Python, TensorFlow, scikit-learn, data analysis, algorithm development</p>
 							</section>
 							<section>
-								<span class="icon solid major fa-shield-alt"></span>
+								<span class="icon fa-solid major fa-shield-alt"></span>
 								<p><strong>Cybersecurity</strong></p>
 								<p>Security Engineering, Reverse Engineering and Vulnerability Analysis</p>
 								<p><em>Skills/Technologies:</em> Ghidra, penetration testing, buffer overflow attacks, secure system design</p>
 							</section>
 							<section>
-								<span class="icon solid major fa-drafting-compass"></span>
+								<span class="icon fa-solid major fa-drafting-compass"></span>
 								<p><strong>VLSI</strong></p>
 								<p>Synthesis & Verification of Digital Systems</p>
 								<p><em>Skills/Technologies:</em> Verilog, Quartus Prime, abc, Yosys</p>
@@ -355,9 +332,9 @@
 						<div class="inner">
 							<h2>Contact me</h2>
 							<ul class="actions fit">
-								<li><a href="mailto:isalian@umass.edu" class="button fit icon fa-envelope">Mail</span></a></li>
-								<li><a href="https://www.linkedin.com/in/ishaan-salian/" class="button fit icon brands fa-linkedin">LinkedIn</span></a></li>
-								<li><a href="https://github.com/ishaansalian" class="button fit icon brands fa-github">Github</span></a></li>						
+								<li><a href="mailto:isalian@umass.edu" class="button fit icon fa-solid fa-envelope">Mail</span></a></li>
+								<li><a href="https://www.linkedin.com/in/ishaan-salian/" class="button fit icon fa-solid brands fa-linkedin">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ishaansalian" class="button fit icon fa-solid brands fa-github">Github</span></a></li>						
 							</ul>
 							<ul class="actions fit">
 								<li><a href="Ishaan_Salian_Resume.pdf" class="button icon solid fa-download">Résumé</a></li>
@@ -375,35 +352,28 @@
 					<h2>Workspace Wizard</h2>
 				</div>
 				<div class="modal-body">
-					<img src="images/sdp.jpg" alt="Workspace Wizard Project">
+					<img src="images/sdp.jpg" alt="Workspace Wizard Project"/>
 					<img src="images/sdp1.jpg" alt="Workspace Wizard Project">
-					<p><strong>Senior Design Project</strong></p>
 					<p>As the Logistics and Hardware Lead for the Workspace Wizard project, I am responsible for overseeing the integration of various hardware components and ensuring the effective communication between the robot, overhead camera, and charging station. My role involves coordinating logistics to optimize the placement and accessibility of components, which is crucial for the project's overall efficiency. I am currently developing a robust PCB prototype that facilitates reliable Bluetooth communication and precise motor control, enabling the robot to autonomously organize the workspace. Through careful planning and implementation, I am driving the progress of our autonomous desk organization system, ensuring it meets functional specifications while adhering to project timelines.</p>
-
-					<h4>Key Features:</h4>
-					<ul>
-						<li>Real-time environmental monitoring</li>
-						<li>Automated lighting and climate control</li>
-						<li>Occupancy detection and space optimization</li>
-						<li>Energy consumption analytics</li>
-						<li>Mobile app for user preferences</li>
+					
+					<h4>Technologies Used:</h4>
+					<ul style="list-style-type: none;">
+						<li><i class="fa-solid fa-microchip"></i> KiCad</li>
+						<li><i class="devicon-git-plain"></i> Git Version Control</li>
+						<li><i class="devicon-fusion-plain"></i> Fusion 360</li>
+						<li><i class="fa-solid fa-gears"></i> Servo Motor Control</li>
+						<li><i class="devicon-opencv-plain"></i> OpenCV</li>
+						<li><i class="fa-brands fa-bluetooth"></i> Bluetooth Low Energy (BLE)</li>
 					</ul>
-					<!-- TODO: maybe remove this
-					<div class="tech-stack">
-						<h4>Technologies Used:</h4>
-						<div class="tech-tags">
-							<span class="tech-tag">Maybe remove this</span>
-							<span class="tech-tag">Python</span>
-							<span class="tech-tag">IoT Sensors</span>
-							<span class="tech-tag">Machine Learning</span>
-							<span class="tech-tag">React Native</span>
-							<span class="tech-tag">Firebase</span>
-						</div>
-					-->
+
 					<!-- TODO: NEED TO EDIT THIS FOR ALL MODALS-->
 					<ul class="actions fit">
-						<li><a href="https://websites.umass.edu/ece-sdp/sdp25-team-15/" class="button fit icon fa-folder-open">Documentation</span></a></li>
-						<li><a href="https://drive.google.com/open?id=1K6Wf-U-DU9u5BgCfjpgWhyY3WK8aw3Z0&usp=drive_copy" class="button fit icon brands fa-youtube">Video</span></a></li>					
+						<li><a href="https://websites.umass.edu/ece-sdp/sdp25-team-15/" class="button fit fa-solid fa-folder-open">Documentation</a></li>
+						<li><a href="https://drive.google.com/open?id=1K6Wf-U-DU9u5BgCfjpgWhyY3WK8aw3Z0&usp=drive_copy" class="button fit icon fa-solid brands fa-youtube">Video</a></li>					
+					</ul>
+					
+					<ul class="actions fit">
+						<li><a href="projects.html" class="button fit">view more projects</a></li>
 					</ul>
 				</div>
 			</div>
@@ -418,29 +388,67 @@
 				</div>
 				<div class="modal-body">
 					<img src="images/tinytemp2.jpg" alt="TinyTemp Digital Thermometer">
-					<p>A compact, high-precision digital thermometer designed for embedded applications. Features a custom PCB design, temperature logging capabilities, and wireless connectivity for remote monitoring.</p>
-					
-					<h4>Key Features:</h4>
-					<ul>
-						<li>±0.1°C temperature accuracy</li>
-						<li>LCD display with backlight</li>
-						<li>Data logging to SD card</li>
-						<li>Wireless data transmission</li>
-						<li>Battery-powered with sleep modes</li>
-						<li>Compact form factor</li>
+					<p>In this project, I designed a compact PCB using KiCad, achieving a 33% size reduction with a sleek 2-square-inch design. I implemented power-saving algorithms in embedded C, optimizing the system to sample temperature values only when necessary. The project was completed at 76% of the cost requirements, showcasing my ability to manage resources effectively and meet budget constraints.</p>
+
+					<h4>Technologies Used:</h4>
+					<ul style="list-style-type: none;">
+						<li>insert more</li>
 					</ul>
-					
-					<!---<div class="tech-stack">
-						<h4>Technologies Used:</h4>
-						<div class="tech-tags">
-							<span class="tech-tag">C/C++</span>
-							<span class="tech-tag">Arduino</span>
-							<span class="tech-tag">KiCad</span>
-							<span class="tech-tag">PCB Design</span>
-							<span class="tech-tag">ESP32</span>
-							<span class="tech-tag">Sensors</span>
-						</div>
-					</div>--->
+					<ul class="actions fit">
+						<li><a href="projects.html" class="button fit">view more projects</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- CampusCompass Modal -->
+		<div id="CampusCompassModal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" onclick="closeModal('CampusCompassModal')">&times;</span>
+					<h2>Campus Compass - Intelligent Meal Recommendation System</h2>
+				</div>
+				<div class="modal-body">
+					<img src="images/campuscompass.jpg" alt="Campus Compass">
+					<p>As the Backend Developer for Campus Compass, I led the development of an intelligent meal recommendation system that leverages LLM technology to provide personalized dining suggestions. My role involved architecting the backend infrastructure to seamlessly integrate with UMass Dining APIs, ensuring real-time data processing and high accuracy in recommendations. I implemented sophisticated algorithms that analyze dietary preferences, nutritional requirements, and current availability to deliver tailored meal suggestions. Through careful optimization and testing, I achieved an 82% alignment rate with user preferences, demonstrating the system's effectiveness in enhancing the campus dining experience.</p>
+
+					<h4>Technologies Used:</h4>
+					<ul style="list-style-type: none;">
+						<li><i class="fa-brands fa-python"></i> Python</li>
+						<li><i class="fa-solid brands fa-openai"></i> OpenAI API</li>
+						<li><i class="devicon-git-plain"></i> Git Version Control</li>
+					</ul>
+					<ul class="actions fit">
+						<li><a href="projects.html" class="button fit">view more projects</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- KeyRing Modal -->
+		<div id="keyRingModal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" onclick="closeModal('keyRingModal')">&times;</span>
+					<h2>KeyRing - Smart Key Management System</h2>
+				</div>
+				<div class="modal-body">
+					<img src="images/keyring.jpg" alt="KeyRing">
+					<p>As part of the keyRING project, I designed a system that senses keys using a spring-like mechanical switch and a sonar sensor to detect door movement. I programmed the ATmega328P in C to communicate with the switch for key detection using interrupts. This cost-effective design earned the "Cheapest Hardware Hack" award while achieving all project goals.</p>
+					<h4>Technologies Used:</h4>
+					<ul style="list-style-type: none;">
+						<li><i class="devicon-arduino-plain-wordmark"></i> Arduino Uno</li>
+						<li><i class="devicon-cplusplus-plain"></i> Embedded C Programming</li>
+						<li><i class="fa-solid fa-shapes"></i> Hardware Prototyping</li>
+					</ul>
+					<ul class="actions fit">
+							<li><a href="https://devpost.com/software/keyring" class="button fit icon fa-solid fa-code">Devpost</a></li>
+							<li><a href="https://github.com/ishaansalian/keyRING" class="button fit icon fa-solid brands fa-github">Github</a></li>
+							<li><a href="https://youtu.be/JUcyqoqNcMM" class="button fit icon fa-solid brands fa-youtube">Video</a></li>
+					</ul>
+					<ul class="actions fit">
+						<li><a href="projects.html" class="button fit">view more projects</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -454,35 +462,20 @@
 				</div>
 				<div class="modal-body">
 					<img src="images/project1.jpg" alt="TravelTime Bus Information Display">
-					<p>A real-time bus information display system that provides live arrival times, route information, and service alerts for public transportation. Designed for bus stops and transit stations.</p>
-					
-					<h4>Key Features:</h4>
-					<ul>
-						<li>Live bus arrival predictions</li>
-						<li>Multiple route monitoring</li>
-						<li>Service alerts and notifications</li>
-						<li>Weather-resistant outdoor display</li>
-						<li>Solar-powered operation</li>
-						<li>Remote configuration capabilities</li>
+					<p>I developed a system that provides real-time transit information by utilizing a public transit API. The project involved integrating an Arduino Mega and ESP8266 using serial communication for accurate bus updates. I implemented 7-segment displays for timing and an LCD screen to clearly present bus information, ensuring easy and quick access to real-time updates.</p>
+
+					<h4>Technologies Used:</h4>
+					<ul style="list-style-type: none;">
+					<li><i class="devicon-arduino-plain-wordmark"></i> Arduino</li>
+					<li><i class="icon fa-folder-open"></i> HTML5</li>
+					<li><i class="devicon-javascript-plain"></i> JavaScript</li>
 					</ul>
-					
-					<!--
-					<div class="tech-stack">
-						<h4>Technologies Used:</h4>
-						<div class="tech-tags">
-							<span class="tech-tag">Python</span>
-							<span class="tech-tag">Raspberry Pi</span>
-							<span class="tech-tag">API Integration</span>
-							<span class="tech-tag">LCD Display</span>
-							<span class="tech-tag">Solar Power</span>
-							<span class="tech-tag">Linux</span>
-						</div>
-					</div>
-					-->
-					
 					<ul class="actions fit">
-						<li><a href="https://devpost.com/software/travel-time-r5mp2g" class="button fit icon fa-code"><span class="label">Devpost</span></a></li>
-						<li><a href="https://github.com/ishaansalian/TravelTime" class="button fit icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://devpost.com/software/travel-time-r5mp2g" class="button fit icon fa-folder-open">Documentation</span></a></li>
+						<li><a href="https://github.com/ishaansalian/TravelTime" class="button fit icon brands fa-github">Github</span></a></li>					
+					</ul>
+					<ul class="actions fit">
+						<li><a href="projects.html" class="button fit">view more projects</a></li>
 					</ul>
 				</div>
 			</div>
