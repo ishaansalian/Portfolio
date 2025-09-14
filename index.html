@@ -56,14 +56,13 @@
             }
 
             .image-container img {
-                max-width: 100%; /* Change from 400px to 100% */
-                width: 100%;
+                max-width: calc(100% - 40px); /* Account for modal padding */
+                width: auto; /* Let it scale naturally */
                 height: auto;
                 border-radius: 10px;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-                flex: 0 0 auto;
+                flex: none; /* Remove flex sizing */
                 object-fit: contain;
-                box-sizing: border-box; 
             }
 
 			.modal-header {
@@ -162,28 +161,35 @@
 				cursor: pointer;
 			}
 
-            /* Update mobile styles */
             @media (max-width: 768px) {
-                .modal-content {
-                    width: 95%;
-                    margin: 10% auto;
-                }
-                
-                .modal-header,
-                .modal-body {
-                    padding: 20px;
-                }
-                
-                .image-container {
-                    flex-direction: column;
-                    margin: 10px 0;
-                }
-                
-                .image-container img {
-                    max-width: 100%;
-                    width: 100%;
-                }
-            }
+			.modal-body {
+				padding: 15px; /* Reduce padding on mobile */
+			}
+			
+			.image-container {
+				margin: 10px 0;
+				padding: 0 5px; /* Add small side padding */
+			}
+			
+			.image-container img {
+				max-width: 100%;
+				width: 100%;
+				height: auto;
+			}
+			
+			/* Add this line: */
+			.modal-content {
+				width: 95%;
+			}
+
+			#sidebar {
+				display: block !important;
+				position: fixed !important;
+				left: 0 !important;
+				top: 0 !important;
+				font-size: 12px !important;
+			}
+		}
 		</style>
 	</head>
 
@@ -438,7 +444,7 @@
 					<h2>Campus Compass - Intelligent Meal Recommendation System</h2>
 				</div>
 				<div class="modal-body">
-					<img src="images/campuscompass.jpg" alt="Campus Compass">
+					<img src="images/CampusCompass.jpg" alt="Campus Compass">
 					<p>As the Backend Developer for Campus Compass, I led the development of an intelligent meal recommendation system that leverages LLM technology to provide personalized dining suggestions. My role involved architecting the backend infrastructure to seamlessly integrate with UMass Dining APIs, ensuring real-time data processing and high accuracy in recommendations. I implemented sophisticated algorithms that analyze dietary preferences, nutritional requirements, and current availability to deliver tailored meal suggestions. Through careful optimization and testing, I achieved an 82% alignment rate with user preferences, demonstrating the system's effectiveness in enhancing the campus dining experience.</p>
 
 					<h4>Technologies Used:</h4>

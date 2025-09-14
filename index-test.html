@@ -11,151 +11,7 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Modal Styles */
-			.modal {
-				display: none;
-				position: fixed;
-				z-index: 10000;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, 0.8);
-				backdrop-filter: blur(5px);
-				animation: fadeIn 0.3s ease-out;
-			}
-
-			.modal-content {
-				position: relative;
-				background: rgba(0, 0, 0, 0.8);
-				margin: 5% auto;
-				padding: 0;
-				border-radius: 15px;
-				width: 90%;
-				max-width: 800px;
-				max-height: 85vh;
-				overflow-y: auto;
-				box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-				animation: slideIn 0.3s ease-out;
-				border: 1px solid rgba(255, 255, 255, 0.1);
-			}
-
-			.modal-header {
-				padding: 30px 30px 20px 30px;
-				border-bottom: 1px solid rgb(255, 255, 255);
-				background: rgba(0, 0, 0);
-				border-radius: 15px 15px 0 0;
-			}
-
-			.modal-header h2 {
-				margin: 0;
-				color: #fff;
-				font-size: 2em;
-				background: rgba(255, 255, 255);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-			}
-			
-			.modal-body {
-				padding: 30px;
-				color: #e0e0e0;
-				line-height: 1.6;
-			}
-			
-			.modal-body img {
-				width: auto;
-				max-width: 400px;
-				height: auto;
-				border-radius: 0px;
-				margin: 20px 0;
-				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-			}
-
-			.close {
-				position: absolute;
-				top: 15px;
-				right: 25px;
-				color: rgba(255, 255, 255, 0.4);
-				font-size: 35px;
-				font-weight: bold;
-				cursor: pointer;
-				transition: all 0.3s ease;
-				z-index: 1;
-			}
-
-			.close:hover,
-			.close:focus {
-				color: #ffffff;
-				transform: rotate(90deg);
-			}
-
-			.project-links {
-				margin-top: 25px;
-				display: flex;
-				gap: 15px;
-				flex-wrap: wrap;
-			}
-
-			.project-links a {
-				display: inline-block;
-				padding: 12px 25px;
-				background: rgba(255, 255, 255);
-				color: white;
-				text-decoration: none;
-				border-radius: 25px;
-				transition: all 0.3s ease;
-				font-weight: 600;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				font-size: 0.9em;
-			}
-
-			.project-links a:hover {
-				background: rgba(255, 255, 255, 0.05);
-			}
-
-			@keyframes fadeIn {
-				from { opacity: 0; }
-				to { opacity: 1; }
-			}
-
-			@keyframes slideIn {
-				from { 
-					opacity: 0;
-					transform: translateY(-50px) scale(0.95);
-				}
-				to { 
-					opacity: 1;
-					transform: translateY(0) scale(1);
-				}
-			}
-
-			/* Clickable project images */
-			.project-image {
-				cursor: pointer;
-			}
-
-			/* Responsive design */
-			@media (max-width: 768px) {
-				.modal-content {
-					width: 95%;
-					margin: 10% auto;
-				}
-				
-				.modal-header,
-				.modal-body {
-					padding: 20px;
-				}
-				
-				.modal-header h2 {
-					font-size: 1.5em;
-				}
-			}
-		</style>
 	</head>
 	<body class="is-preload">
 
@@ -194,7 +50,7 @@
 							<h2 class="major">Here are some of my Projects</h2>
 						</div>
 						<section>
-							<a class="image project-image" onclick="openModal('sdpModal')"><img src="images/sdp.jpg" alt="" data-position="center center" /></a>
+							<a class="image"><img src="images/sdp.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Workspace Wizard (Senior Design Project)</h2>
@@ -202,28 +58,28 @@
 							</div>
 						</section>
 						<section>
-							<a class="image project-image" onclick="openModal('keyRingModal')"><img src="images/keyring.jpg" alt="" data-position="center center" /></a>
+							<a href="file:///Users/ishaan/Portfolio/projects.html" class="image"><img src="images/tinytemp2.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>keyRING - Smart Key Holder</h2>
+									<h2>TinyTemp - Digital Thermometer</h2>
 								</div>
 							</div>
 						</section>
-
 						<section>
-							<a class="image project-image" onclick="openModal('CampusCompassModal')"><img src="images/CampusCompass.jpg" alt="" data-position="center center" /></a>
+							<a class="image"><img src="images/project1.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Campus Compass - Intelligent Meal Recommendation System</h2>
+									<h2>TravelTime - Real-time Bus Information Display</h2>
 								</div>
 							</div>
 						</section>
+						
 						<div class="inner">
 							<ul class="actions fit">
 								<li><a href="projects.html" class="button fit">view more projects</a></li>
 							</ul>
 					</div>
-				</section>
+					</section>
 				
 				<!-- Two -->
 					<section id="two" class="wrapper style2 spotlights">
@@ -244,7 +100,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Institute of Electrical and Electronics Engineers, UMass Chapter</h2>
-									<h3>Liaison</h3>
+									<h3>Liaison (Active)</h3>
 								</div>
 							</div>
 						</section>
@@ -262,32 +118,32 @@
 							<h2>What I'm good at</h2>
 							<div class="features">
 								<section>
-									<span class="icon fa-solid major fa-code"></span>
+									<span class="icon solid major fa-code"></span>
 									<p><strong>Programming Languages</strong></p>
 									<p>Python, C, C++, Java, MATLAB, Verilog, RISC-V, Assembly, HTML</p>
 								</section>
 								<section>
-									<span class="icon fa-solid major fa-microchip"></span>
+									<span class="icon solid major fa-microchip"></span>
 									<p><strong>Circuit Design and PCB Layout</strong></p>
 									<p>KiCad, Altium Designer</p>
 								</section>
 								<section>
-									<span class="icon fa-solid major fa-memory"></span>
+									<span class="icon solid major fa-memory"></span>
 									<p><strong>Hardware</strong></p>
 									<p>PLC Programming, Arduino, BeagleBone, Bare-Metal Programming</p>
 								</section>
 								<section>
-									<span class="icon fa-solid major fa-lock"></span>
+									<span class="icon solid major fa-lock"></span>
 									<p><strong>Cybersecurity</strong></p>
 									<p>Ghidra, Penetration testing</p>
 								</section>
 								<section>
-									<span class="icon major fa-solid fa-car-battery"></span>
+									<span class="icon major fa-car-battery"></span>
 									<p><strong>Tools</strong></p>
 									<p>Soldering, Multimeters, Oscilloscopes, Quartus Prime</p>
 								</section>
 								<section>
-									<span class="icon fa-solid major fa-lightbulb"></span> 
+									<span class="icon major fa-lightbulb"></span> 
 									<p><strong>Others</strong></p>
 									<p>Fusion 360, 3D Printing, Git, Shell</p>
 								</section>
@@ -300,25 +156,25 @@
 						<h2>What I've Studied</h2>
 						<div class="features">
 							<section>
-								<span class="icon fa-solid major fa-microchip"></span>
+								<span class="icon solid major fa-microchip"></span>
 								<p><strong>Embedded Systems</strong></p>
 								<p>Design Principles for Low Power Embedded Computer Systems, Networked Embedded System, Hardware Organization & Digital Design</p>
 								<p><em>Skills/Technologies:</em> Bare-metal programming, hardware-software co-design, Low-power design, real-time communication, network protocols (BLE, UDP)</p>
 							</section>
 							<section>
-								<span class="icon fa-solid major fa-brain"></span>
+								<span class="icon solid major fa-brain"></span>
 								<p><strong>Artificial Intelligence and Data</strong></p>
 								<p>Artificial Intelligence, Advanced Programming (Data Structures and Analysis), Probability & Statistics</p>
 								<p><em>Skills/Technologies:</em> Python, TensorFlow, scikit-learn, data analysis, algorithm development</p>
 							</section>
 							<section>
-								<span class="icon fa-solid major fa-shield-alt"></span>
+								<span class="icon solid major fa-shield-alt"></span>
 								<p><strong>Cybersecurity</strong></p>
 								<p>Security Engineering, Reverse Engineering and Vulnerability Analysis</p>
 								<p><em>Skills/Technologies:</em> Ghidra, penetration testing, buffer overflow attacks, secure system design</p>
 							</section>
 							<section>
-								<span class="icon fa-solid major fa-drafting-compass"></span>
+								<span class="icon solid major fa-drafting-compass"></span>
 								<p><strong>VLSI</strong></p>
 								<p>Synthesis & Verification of Digital Systems</p>
 								<p><em>Skills/Technologies:</em> Verilog, Quartus Prime, abc, Yosys</p>
@@ -332,154 +188,15 @@
 						<div class="inner">
 							<h2>Contact me</h2>
 							<ul class="actions fit">
-								<li><a href="mailto:isalian@umass.edu" class="button fit icon fa-solid fa-envelope">Mail</span></a></li>
-								<li><a href="https://www.linkedin.com/in/ishaan-salian/" class="button fit icon fa-solid brands fa-linkedin">LinkedIn</span></a></li>
-								<li><a href="https://github.com/ishaansalian" class="button fit icon fa-solid brands fa-github">Github</span></a></li>						
+								<li><a href="mailto:isalian@umass.edu" class="button fit icon fa-envelope">Mail</span></a></li>
+								<li><a href="https://www.linkedin.com/in/ishaan-salian/" class="button fit icon brands fa-linkedin">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ishaansalian" class="button fit icon brands fa-github">Github</span></a></li>						
 							</ul>
 							<ul class="actions fit">
 								<li><a href="Ishaan_Salian_Resume.pdf" class="button icon solid fa-download">Résumé</a></li>
 							</ul>
 						</div>
 					</section>
-
-		<!-- Project Modals -->
-		
-		<!-- Workspace Wizard Modal -->
-		<div id="sdpModal" class="modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<span class="close" onclick="closeModal('sdpModal')">&times;</span>
-					<h2>Workspace Wizard</h2>
-				</div>
-				<div class="modal-body">
-					<img src="images/sdp.jpg" alt="Workspace Wizard Project"/>
-					<img src="images/sdp1.jpg" alt="Workspace Wizard Project">
-					<p>As the Logistics and Hardware Lead for the Workspace Wizard project, I am responsible for overseeing the integration of various hardware components and ensuring the effective communication between the robot, overhead camera, and charging station. My role involves coordinating logistics to optimize the placement and accessibility of components, which is crucial for the project's overall efficiency. I am currently developing a robust PCB prototype that facilitates reliable Bluetooth communication and precise motor control, enabling the robot to autonomously organize the workspace. Through careful planning and implementation, I am driving the progress of our autonomous desk organization system, ensuring it meets functional specifications while adhering to project timelines.</p>
-					
-					<h4>Technologies Used:</h4>
-					<ul style="list-style-type: none;">
-						<li><i class="fa-solid fa-microchip"></i> KiCad</li>
-						<li><i class="devicon-git-plain"></i> Git Version Control</li>
-						<li><i class="devicon-fusion-plain"></i> Fusion 360</li>
-						<li><i class="fa-solid fa-gears"></i> Servo Motor Control</li>
-						<li><i class="devicon-opencv-plain"></i> OpenCV</li>
-						<li><i class="fa-brands fa-bluetooth"></i> Bluetooth Low Energy (BLE)</li>
-					</ul>
-
-					<!-- TODO: NEED TO EDIT THIS FOR ALL MODALS-->
-					<ul class="actions fit">
-						<li><a href="https://websites.umass.edu/ece-sdp/sdp25-team-15/" class="button fit fa-solid fa-folder-open">Documentation</a></li>
-						<li><a href="https://drive.google.com/open?id=1K6Wf-U-DU9u5BgCfjpgWhyY3WK8aw3Z0&usp=drive_copy" class="button fit icon fa-solid brands fa-youtube">Video</a></li>					
-					</ul>
-					
-					<ul class="actions fit">
-						<li><a href="projects.html" class="button fit">view more projects</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<!-- TinyTemp Modal -->
-		<div id="tinytempModal" class="modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<span class="close" onclick="closeModal('tinytempModal')">&times;</span>
-					<h2>TinyTemp - Digital Thermometer</h2>
-				</div>
-				<div class="modal-body">
-					<img src="images/tinytemp2.jpg" alt="TinyTemp Digital Thermometer">
-					<p>In this project, I designed a compact PCB using KiCad, achieving a 33% size reduction with a sleek 2-square-inch design. I implemented power-saving algorithms in embedded C, optimizing the system to sample temperature values only when necessary. The project was completed at 76% of the cost requirements, showcasing my ability to manage resources effectively and meet budget constraints.</p>
-
-					<h4>Technologies Used:</h4>
-					<ul style="list-style-type: none;">
-						<li>insert more</li>
-					</ul>
-					<ul class="actions fit">
-						<li><a href="projects.html" class="button fit">view more projects</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<!-- CampusCompass Modal -->
-		<div id="CampusCompassModal" class="modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<span class="close" onclick="closeModal('CampusCompassModal')">&times;</span>
-					<h2>Campus Compass - Intelligent Meal Recommendation System</h2>
-				</div>
-				<div class="modal-body">
-					<img src="images/campuscompass.jpg" alt="Campus Compass">
-					<p>As the Backend Developer for Campus Compass, I led the development of an intelligent meal recommendation system that leverages LLM technology to provide personalized dining suggestions. My role involved architecting the backend infrastructure to seamlessly integrate with UMass Dining APIs, ensuring real-time data processing and high accuracy in recommendations. I implemented sophisticated algorithms that analyze dietary preferences, nutritional requirements, and current availability to deliver tailored meal suggestions. Through careful optimization and testing, I achieved an 82% alignment rate with user preferences, demonstrating the system's effectiveness in enhancing the campus dining experience.</p>
-
-					<h4>Technologies Used:</h4>
-					<ul style="list-style-type: none;">
-						<li><i class="fa-brands fa-python"></i> Python</li>
-						<li><i class="fa-solid brands fa-openai"></i> OpenAI API</li>
-						<li><i class="devicon-git-plain"></i> Git Version Control</li>
-					</ul>
-					<ul class="actions fit">
-						<li><a href="projects.html" class="button fit">view more projects</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<!-- KeyRing Modal -->
-		<div id="keyRingModal" class="modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<span class="close" onclick="closeModal('keyRingModal')">&times;</span>
-					<h2>KeyRing - Smart Key Management System</h2>
-				</div>
-				<div class="modal-body">
-					<img src="images/keyring.jpg" alt="KeyRing">
-					<p>As part of the keyRING project, I designed a system that senses keys using a spring-like mechanical switch and a sonar sensor to detect door movement. I programmed the ATmega328P in C to communicate with the switch for key detection using interrupts. This cost-effective design earned the "Cheapest Hardware Hack" award while achieving all project goals.</p>
-					<h4>Technologies Used:</h4>
-					<ul style="list-style-type: none;">
-						<li><i class="devicon-arduino-plain-wordmark"></i> Arduino Uno</li>
-						<li><i class="devicon-cplusplus-plain"></i> Embedded C Programming</li>
-						<li><i class="fa-solid fa-shapes"></i> Hardware Prototyping</li>
-					</ul>
-					<ul class="actions fit">
-							<li><a href="https://devpost.com/software/keyring" class="button fit icon fa-solid fa-code">Devpost</a></li>
-							<li><a href="https://github.com/ishaansalian/keyRING" class="button fit icon fa-solid brands fa-github">Github</a></li>
-							<li><a href="https://youtu.be/JUcyqoqNcMM" class="button fit icon fa-solid brands fa-youtube">Video</a></li>
-					</ul>
-					<ul class="actions fit">
-						<li><a href="projects.html" class="button fit">view more projects</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<!-- TravelTime Modal -->
-		<div id="traveltimeModal" class="modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<span class="close" onclick="closeModal('traveltimeModal')">&times;</span>
-					<h2>TravelTime - Real-time Bus Information</h2>
-				</div>
-				<div class="modal-body">
-					<img src="images/project1.jpg" alt="TravelTime Bus Information Display">
-					<p>I developed a system that provides real-time transit information by utilizing a public transit API. The project involved integrating an Arduino Mega and ESP8266 using serial communication for accurate bus updates. I implemented 7-segment displays for timing and an LCD screen to clearly present bus information, ensuring easy and quick access to real-time updates.</p>
-
-					<h4>Technologies Used:</h4>
-					<ul style="list-style-type: none;">
-					<li><i class="devicon-arduino-plain-wordmark"></i> Arduino</li>
-					<li><i class="icon fa-folder-open"></i> HTML5</li>
-					<li><i class="devicon-javascript-plain"></i> JavaScript</li>
-					</ul>
-					<ul class="actions fit">
-						<li><a href="https://devpost.com/software/travel-time-r5mp2g" class="button fit icon fa-folder-open">Documentation</span></a></li>
-						<li><a href="https://github.com/ishaansalian/TravelTime" class="button fit icon brands fa-github">Github</span></a></li>					
-					</ul>
-					<ul class="actions fit">
-						<li><a href="projects.html" class="button fit">view more projects</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
@@ -498,44 +215,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-			<!-- Modal Scripts -->
-			<script>
-				function openModal(modalId) {
-					document.getElementById(modalId).style.display = "block";
-					document.body.style.overflow = "hidden"; // Prevent background scrolling
-				}
-
-				function closeModal(modalId) {
-					document.getElementById(modalId).style.display = "none";
-					document.body.style.overflow = "auto"; // Restore scrolling
-				}
-
-				// Close modal when clicking outside of it
-				window.onclick = function(event) {
-					const modals = document.getElementsByClassName('modal');
-					for (let i = 0; i < modals.length; i++) {
-						if (event.target === modals[i]) {
-							modals[i].style.display = "none";
-							document.body.style.overflow = "auto";
-						}
-					}
-				}
-
-				// Close modal with Escape key
-				document.addEventListener('keydown', function(event) {
-					if (event.key === 'Escape') {
-						const modals = document.getElementsByClassName('modal');
-						for (let i = 0; i < modals.length; i++) {
-							if (modals[i].style.display === "block") {
-								modals[i].style.display = "none";
-								document.body.style.overflow = "auto";
-								break;
-							}
-						}
-					}
-				});
-			</script>
 
 	</body>
 </html>
