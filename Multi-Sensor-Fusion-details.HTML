@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>TinyTemp - Digital Thermometer</title> <!-- CHANGE -->
+  <title>Multi-Sensor Fusion with FreeRTOS</title> <!-- CHANGED -->
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -115,13 +115,9 @@
               </script>
 
               <div class="swiper-wrapper align-items-center">
-
+                
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/tinytemp.jpg" alt=""> <!-- CHANGE -->
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/tinytemp2.jpg" alt=""> <!-- CHANGE -->
+                  <img src="assets/img/portfolio/rtos-hardware.jpg" alt="ESP32 with Teensy 3.6"> <!-- CHANGED -->
                 </div>
 
               </div>
@@ -131,16 +127,19 @@
 
           <div class="col-lg-4">
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>TinyTemp - Digital Thermometer</h2> <!-- CHANGE -->
+              <h2>Multi-Sensor Fusion with FreeRTOS</h2> <!-- CHANGE -->
               <p>
-              In this project, I designed a compact PCB using KiCad, achieving a 33% size reduction with a sleek 2-square-inch design. I implemented power-saving algorithms in embedded C, optimizing the system to sample temperature values only when necessary. The project was completed at 76% of the cost requirements, showcasing my ability to manage resources effectively and meet budget constraints.              </p> <!-- CHANGE -->
+                Developed a real-time multi-sensor data acquisition system using an ESP32 microcontroller and FreeRTOS. The project simulates 3D printer chamber monitoring by fusing data from an IMU (100Hz), light sensor (0.5Hz), and environmental sensor (1Hz), all sharing a single I2C bus. Implemented task-based architecture with five concurrent FreeRTOS tasks, utilizing mutexes to prevent I2C bus collisions and serial output corruption. Successfully debugged priority inversion, task starvation, and interrupt latching issues through timing analysis of CSV-logged data. 
+              </p> <!-- CHANGE -->
             </div>
-                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3> <!-- CHANGE -->
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project Information</h3> <!-- CHANGE -->
               <ul>
-                <li><strong>Category</strong>: Class Project</li> <!-- CHANGE -->
-                <li><strong>Technologies Used</strong>: KiCad, Embedded C Programming</li>
-            </div>
+                <li><strong>Category</strong>: Personal Project</li> <!-- CHANGE -->
+                <li><strong>Technologies Used</strong>: FreeRTOS, ESP32, I2C Protocol, Hardware Interrupts, Mutex Synchronization, UART Logging, Python Data Analysis, Arduino IDE</li> <!-- CHANGED -->
+                <li><strong>Project Links:</strong></li>
+                <li><a href="https://github.com/ishaansalian/FreeRTOS-Multi-Sensor-Fusion/">GitHub</a></li> <!-- CHANGED - update with your actual link -->
+              </ul>
             </div>
           </div>
         </div>
