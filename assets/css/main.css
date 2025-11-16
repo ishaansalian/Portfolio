@@ -1268,8 +1268,95 @@ section,
 }
 
 /*--------------------------------------------------------------
+# About Section - Updates Cards
+--------------------------------------------------------------*/
+.about .updates-card {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.about .updates-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about .updates-card .card-header {
+  background: rgba(94, 196, 205, 0.1);
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.about .updates-card .card-header i {
+  font-size: 1.8rem;
+  color: #5ec4cd;
+}
+
+.about .updates-card .card-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.about .updates-card .card-body {
+  padding: 20px;
+}
+
+.about .updates-card iframe {
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.about .social-link-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about .btn-social {
+  display: inline-block;
+  padding: 12px 30px;
+  /* background: linear-gradient(135deg, #5ec4cd 0%, #4a9ea6 100%); */
+  background: #5ec4cd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(94, 196, 205, 0.3);
+}
+
+.about .btn-social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(94, 196, 205, 0.4);
+  color: #fff;
+}
+
+.about .btn-social i {
+  margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about .updates-card .card-header h4 {
+    font-size: 1rem;
+  }
+  
+  .about .updates-card iframe {
+    height: 400px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
-  /* Add your styles here */
+
 }
