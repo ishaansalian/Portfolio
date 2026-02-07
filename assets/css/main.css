@@ -1360,3 +1360,161 @@ section,
 .starter-section {
 
 }
+
+/*--------------------------------------------------------------
+# Goodreads Widget Styling - Force Override 
+--------------------------------------------------------------*/
+.gr_custom_container_1770423855,
+.gr_custom_container_1770423855 * {
+  font-family: var(--default-font) !important;
+}
+
+.gr_custom_container_1770423855 {
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  color: var(--default-color) !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.gr_custom_header_1770423855 {
+  display: none !important;
+}
+
+.gr_custom_each_container_1770423855 {
+  width: 100% !important;
+  clear: both !important;
+  margin-bottom: 20px !important;
+  overflow: auto !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.gr_custom_book_container_1770423855 {
+  overflow: hidden !important;
+  height: 140px !important;
+  float: left !important;
+  margin-right: 15px !important;
+  width: 95px !important;
+}
+
+.gr_custom_book_container_1770423855 img {
+  border-radius: 4px !important;
+  width: 95px !important;
+  height: auto !important;
+}
+
+.gr_custom_title_1770423855 {
+  margin-bottom: 10px !important;
+}
+
+.gr_custom_title_1770423855 a {
+  color: var(--accent-color) !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  font-family: var(--default-font) !important;
+}
+
+.gr_custom_title_1770423855 a:hover {
+  opacity: 0.8 !important;
+}
+
+.gr_custom_author_1770423855 {
+  font-size: 15px !important;
+  color: var(--default-color) !important;
+  margin-top: 5px !important;
+  font-family: var(--default-font) !important;
+}
+
+.gr_custom_author_1770423855 a {
+  color: var(--default-color) !important;
+  text-decoration: none !important;
+  font-family: var(--default-font) !important;
+}
+
+/* Hide Goodreads branding and footer */
+.gr_custom_container_1770423855 center,
+.gr_custom_container_1770423855 noscript,
+.goodreads-footer {
+  display: none !important;
+}
+
+/* Reading Challenge Widget - Force Override */
+#gr_challenge_11680,
+#gr_challenge_11680 * {
+  font-family: var(--default-font) !important;
+}
+
+#gr_challenge_11680 {
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  max-width: 100% !important;
+  min-height: auto !important;
+}
+
+#gr_challenge_progress_body_11680 {
+  color: var(--default-color) !important;
+}
+
+#gr_challenge_progress_body_11680 h3 {
+  display: none !important;
+}
+
+/* Hide the challenge image */
+#gr_challenge_progress_body_11680 .challengePic {
+  display: none !important;
+}
+
+#gr_challenge_progress_body_11680 div {
+  color: var(--default-color) !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  margin-bottom: 15px !important;
+}
+
+#gr_challenge_progress_body_11680 a {
+  color: var(--accent-color) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+#gr_challenge_progress_body_11680 a:hover {
+  opacity: 1 !important;
+}
+
+/* Progress bar styling */
+#gr_challenge_progress_body_11680 > div:nth-of-type(3) {
+  width: 100% !important;
+  margin: 15px 0 !important;
+  float: none !important;
+  border: 1px solid #050d18 !important;
+  height: 14px !important;
+  border-radius: 7px !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#gr_challenge_progress_body_11680 > div:nth-of-type(3) > div {
+  background-color: var(--accent-color) !important;
+  height: 100% !important;
+  border-radius: 7px !important;
+}
+
+/* Hide "view books" link at bottom */
+#gr_challenge_progress_body_11680 > div:last-child {
+  display: none !important;
+}
+
+.reading-section-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 25px 0;
+}
