@@ -125,6 +125,10 @@
                 </div>
 
                 <div class="swiper-slide">
+                  <img src="assets/img/portfolio/PresToe1.jpg" alt=""> <!-- CHANGE -->
+                </div>
+
+                <div class="swiper-slide">
                   <img src="assets/img/portfolio/Dash2.jpg" alt=""> <!-- CHANGE -->
                 </div>
 
@@ -143,17 +147,27 @@
 
           <div class="col-lg-4">
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Dash Humanoid Platform</h2> <!-- CHANGE -->
+              <h2>Distributed Motor Controller Electronics</h2> <!-- CHANGE -->
+              <h4>Humanoid Robot, Dash</h4>
               <p>
-              Designing custom 48V motor controller PCBs for the Dash humanoid robotics platform, featuring STM32F446-based control with DRV8353S gate drivers managing three-phase brushless motors at 30A per phase. The compact circular boards integrate power regulation (48V→12V→5V→3.3V), current sensing for torque control, magnetic encoder interfaces, and CAN bus communication that enables distributed control across 12+ actuators. Furthermore, I am developing custom firmware for robot motor controllers based on the STM32F446 microcontroller, implementing real-time CAN communication for command and telemetry. The firmware uses STM32 HAL to interface with an MCP2542FD CAN transceiver operating at 1 Mbps in classic CAN mode, enabling bidirectional communication with a host computer.
-</p> <!-- CHANGE -->
+              Designing custom 48V motor controller PCBs for a humanoid robotics platform, built around an STM32F446 microcontroller and DRV8353S gate drivers to control three-phase brushless motors at up to 30A per phase. The compact circular boards integrate multi-stage power regulation (48V → 12V → 5V → 3.3V), current sensing for torque control, magnetic encoder interfaces, and CAN bus networking to support distributed control across 12+ actuators.
 
+              I am also developing embedded firmware for the controllers, implementing real-time CAN communication for command and telemetry. Using STM32 HAL and an MCP2542FD transceiver, the system enables reliable bidirectional communication with the host computer for coordinated robotic motion.
+              </p>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="350">
+
+              <h2>High-Current Power Distribution System</h2>
+              <h4>Humanoid Robot, PresToe</h4>
+              <p> Contributing to the redesign of a 48V high-current power distribution and battery management system for a bipedal humanoid robot. The system supports peak loads exceeding 400A and is being redesigned to improve reliability and protection against voltage transients caused by inductive loads.
+              The design integrates MOSFET power stages, TVS-based transient suppression, Hall-effect current sensing for high-current accuracy, galvanic isolation to prevent ground loops, and STM32-based CAN telemetry for real-time voltage and current monitoring. Responsibilities include schematic design, component selection, and preparation of a 6-layer mixed-signal PCB to support safe and reliable power delivery for dynamic robotic actuation.
+              </p>
             </div>
                         <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>More Information</h3> <!-- CHANGE -->
               <ul>
                 <li><strong>Category</strong>: Research</li>
-                <li><strong>Technologies Used</strong>: KiCAD, STM32F446, CAN 2.0, MCP2542FD CAN Transceiver, MA732, STM32CubeIDE</li>
+                <li><strong>Technologies Used</strong>: KiCad, STM32F446, STM32 HAL, CAN 2.0, MCP2542FD, DRV8353S, MA732 Encoder, Hall-effect current sensing, MOSFET power stages</li>
                 <li><strong>Project Links:</strong></li>
                 <li><a href="https://www.umass.edu/robotics/daros">Lab Website</a></li>
               </ul>
