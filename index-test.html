@@ -199,13 +199,29 @@
           <!-- Divider -->
           <div class="reading-section-divider"></div>     
           <!-- 2026 Reading Challenge Widget -->
-           <!-- 2026 Reading Challenge Widget -->
           <div id="gr_challenge_11680">
             <div id="gr_challenge_progress_body_11680">
-              <!-- Goodreads script will populate this automatically -->
+              <h3>
+                <a rel="nofollow" href="https://www.goodreads.com/challenges/11680-2026-reading-challenge">2026 Reading Challenge</a>
+              </h3>
+              <div class="challengePic">
+                <a rel="nofollow" href="https://www.goodreads.com/challenges/11680-2026-reading-challenge"><img alt="2026 Reading Challenge" src="https://images.gr-assets.com/challenges/1764710439p2/11680.jpg" /></a>
+              </div>
+              <div>
+                Ishaan has read 0 books toward a goal of 12 books.
+              </div>
+              <div style="width: 100px; margin: 4px 5px 5px 0; float: left; border: 1px solid #382110; height: 8px; overflow: hidden; background-color: #FFF">
+                <div style="width: 0%; background-color: #D7D2C4; float: left"><span style="visibility:hidden">hide</span></div>
+              </div>
+              <div>
+                <a rel="nofollow" href="https://www.goodreads.com/user_challenges/70482858">0 of 12 (0%)</a>
+              </div>
+              <div>
+                <a rel="nofollow" href="https://www.goodreads.com/user_challenges/70482858">view books</a>
+              </div>
             </div>
+            <script src="https://www.goodreads.com/user_challenges/widget/198272401-egg?challenge_id=11680&v=2"></script>
           </div>
-          <script src="https://www.goodreads.com/user_challenges/widget/198272401-egg?challenge_id=11680&v=3"></script>
         </div>
       </div>
     </div>
@@ -416,7 +432,7 @@
             <li data-filter=".filter-personal">Personal Projects</li>
           </ul><!-- End Portfolio Filters -->
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sdp">
               <div class="portfolio-content h-100">
@@ -486,10 +502,10 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-personal">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/Transit.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/Transit2.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <p>Transit Dashboard</p>
-                  <a href="assets/img/portfolio/Transit.jpg" title="Transit Dashboard" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/portfolio/Transit2.jpg" title="Transit Dashboard" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="Transit.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
 
                 </div>
@@ -541,16 +557,6 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-personal">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/esp32clock.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <p>ESP32 Digital Clock</p>
-                  <a href="assets/img/portfolio/esp32clock.jpg" title="Digital Clock" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-class">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/CampusCompass.jpg" class="img-fluid" alt="">
@@ -570,7 +576,7 @@
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
-
+            
           </div><!-- End Portfolio Container -->
 
         </div>
@@ -729,85 +735,76 @@
   <script async src="//www.instagram.com/embed.js"></script>
 
   <!-- Fix Goodreads widget text and links -->
-  <!-- Fix Goodreads widget text and links -->
-<script>
-  // Wait for Goodreads widget to load, then fix name and links
+  <script>
+  // Wait for Goodreads widgets to load, then fix name and update progress
   function fixGoodreadsWidget() {
     // Fix "Egg" to "Ishaan" in challenge widget
     const challengeDiv = document.querySelector('#gr_challenge_progress_body_11680');
     if (challengeDiv) {
-      // Get all text nodes and elements
-      const walker = document.createTreeWalker(
-        challengeDiv,
-        NodeFilter.SHOW_TEXT,
-        null,
-        false
-      );
+      const allText = challengeDiv.innerHTML;
+      // Replace all instances of "Egg" with "Ishaan"
+      challengeDiv.innerHTML = allText.replace(/Egg/g, 'Ishaan');
       
-      let node;
-      const nodesToReplace = [];
-      
-      while (node = walker.nextNode()) {
-        if (node.nodeValue && node.nodeValue.includes('Egg')) {
-          nodesToReplace.push(node);
+      // Force refresh the progress from the actual Goodreads page
+      // The widget script caches the data, so we need to extract current values
+      const progressLink = challengeDiv.querySelector('a[href*="user_challenges"]');
+      if (progressLink && progressLink.textContent.includes('of 12')) {
+        // Extract the current count from the link text (e.g., "3 of 12 (25%)")
+        const match = progressLink.textContent.match(/(\d+)\s+of\s+12\s+\((\d+)%\)/);
+        if (match) {
+          const booksRead = match[1];
+          const percentage = match[2];
+          
+          // Update the main text
+          const mainTextDiv = challengeDiv.querySelector('div:not([style]):not([class])');
+          if (mainTextDiv && mainTextDiv.textContent.includes('has read')) {
+            mainTextDiv.innerHTML = mainTextDiv.innerHTML.replace(
+              /has read \d+ books?/,
+              `has read ${booksRead} book${booksRead !== '1' ? 's' : ''}`
+            );
+          }
+          
+          // Update the progress bar
+          const progressBar = challengeDiv.querySelector('div[style*="width: 100px"] div');
+          if (progressBar) {
+            progressBar.style.width = percentage + '%';
+          }
         }
       }
-      
-      nodesToReplace.forEach(node => {
-        node.nodeValue = node.nodeValue.replace(/Egg/g, 'Ishaan');
-      });
-      
-      // Also check divs with innerHTML
-      const divs = challengeDiv.querySelectorAll('div');
-      divs.forEach(div => {
-        // Only replace if this div directly contains "Egg" in its own text
-        const childNodes = Array.from(div.childNodes);
-        childNodes.forEach(child => {
-          if (child.nodeType === Node.TEXT_NODE && child.textContent.includes('Egg')) {
-            child.textContent = child.textContent.replace(/Egg/g, 'Ishaan');
-          }
-        });
-      });
     }
     
     // Fix links in currently reading widget to point to book instead of review
-    const bookContainer = document.querySelector('.gr_custom_book_container_1770423855');
-    const titleContainer = document.querySelector('.gr_custom_title_1770423855');
-    
-    if (bookContainer && titleContainer) {
-      // Get the image src to extract book ID
-      const bookImg = bookContainer.querySelector('img');
-      if (bookImg) {
-        const imgSrc = bookImg.getAttribute('src');
-        // Extract book ID from image URL (format: /books/XXXXX/58784475._SY75_.jpg)
-        const bookIdMatch = imgSrc.match(/\/books\/\d+\/(\d+)/);
-        
-        if (bookIdMatch) {
-          const bookId = bookIdMatch[1];
-          const bookUrl = `https://www.goodreads.com/book/show/${bookId}`;
-          
-          // Update book cover link
-          const bookLink = bookContainer.querySelector('a');
-          if (bookLink) {
-            bookLink.setAttribute('href', bookUrl);
-          }
-          
-          // Update title link
-          const titleLink = titleContainer.querySelector('a');
-          if (titleLink) {
-            titleLink.setAttribute('href', bookUrl);
-          }
-        }
-      }
+    const readingWidget = document.querySelector('#gr_custom_widget_1770423855');
+    if (readingWidget) {
+      const links = readingWidget.querySelectorAll('a[href*="/review/show/"]');
+      links.forEach(link => {
+        link.removeAttribute('href');
+        link.style.cursor = 'default';
+        link.style.pointerEvents = 'none';
+      });
     }
   }
   
-  // Run after page loads and after delays for the widget
+  // Run multiple times to catch the widget loading
   window.addEventListener('load', function() {
     setTimeout(fixGoodreadsWidget, 500);
     setTimeout(fixGoodreadsWidget, 1500);
-    setTimeout(fixGoodreadsWidget, 3000); // Add one more check for slow loading
+    setTimeout(fixGoodreadsWidget, 3000); // Additional delay for slow connections
   });
+  
+  // Also watch for DOM changes in case the widget loads late
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.addedNodes.length) {
+        fixGoodreadsWidget();
+      }
+    });
+  });
+  
+  const challengeContainer = document.querySelector('#gr_challenge_11680');
+  if (challengeContainer) {
+    observer.observe(challengeContainer, { childList: true, subtree: true });
+  }
 </script>
 
 </body>
