@@ -169,7 +169,7 @@
       <div class="updates-card h-100">
         <div class="card-header">
           <i class="fa-regular fa-book-open"></i>
-          <h4>Reading</h4>
+          <h4>Currently Reading</h4>
         </div>
         <div class="card-body">
           <!-- Currently Reading Widget -->
@@ -195,34 +195,6 @@
             </div>
           </div>
           <script src="https://www.goodreads.com/review/custom_widget/198272401.Currently%20Reading?cover_position=left&cover_size=small&num_books=2&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=true&widget_border_width=1&widget_id=1770423855&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>          
-          
-          <!-- Divider -->
-          <div class="reading-section-divider"></div>     
-          <!-- 2026 Reading Challenge Widget -->
-          <div id="gr_challenge_11680">
-            <div id="gr_challenge_progress_body_11680">
-              <h3>
-                <a rel="nofollow" href="https://www.goodreads.com/challenges/11680-2026-reading-challenge">2026 Reading Challenge</a>
-              </h3>
-              <div class="challengePic">
-                <a rel="nofollow" href="https://www.goodreads.com/challenges/11680-2026-reading-challenge"><img alt="2026 Reading Challenge" src="https://images.gr-assets.com/challenges/1764710439p2/11680.jpg" /></a>
-              </div>
-              <div>
-                Ishaan has read 0 books toward a goal of 12 books.
-              </div>
-              <div style="width: 100px; margin: 4px 5px 5px 0; float: left; border: 1px solid #382110; height: 8px; overflow: hidden; background-color: #FFF">
-                <div style="width: 0%; background-color: #D7D2C4; float: left"><span style="visibility:hidden">hide</span></div>
-              </div>
-              <div>
-                <a rel="nofollow" href="https://www.goodreads.com/user_challenges/70482858">0 of 12 (0%)</a>
-              </div>
-              <div>
-                <a rel="nofollow" href="https://www.goodreads.com/user_challenges/70482858">view books</a>
-              </div>
-            </div>
-            <script src="https://www.goodreads.com/user_challenges/widget/198272401-egg?challenge_id=11680&v=2"></script>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -735,32 +707,28 @@
   <script async src="//www.instagram.com/embed.js"></script>
 
   <!-- Fix Goodreads widget text and links -->
-  <script>
-    // Wait for Goodreads widget to load, then fix name and links
+    <script>
+    // Wait for Goodreads widget to load, then remove identifying links
     function fixGoodreadsWidget() {
-      // Fix "Egg" to "Ishaan" in challenge widget
-      const challengeDiv = document.querySelector('#gr_challenge_progress_body_11680');
-      if (challengeDiv) {
-        const divs = challengeDiv.querySelectorAll('div');
-        divs.forEach(div => {
-          if (div.innerHTML.includes('Egg')) {
-            div.innerHTML = div.innerHTML.replace(/Egg/g, 'Ishaan');
-          }
-        });
-      }
-      
-      // Fix links in currently reading widget to point to book instead of review
+      // Remove links in currently reading widget to keep profile hidden
       const readingWidget = document.querySelector('#gr_custom_widget_1770423855');
       if (readingWidget) {
-        const links = readingWidget.querySelectorAll('a[href*="/review/show/"]');
+        const links = readingWidget.querySelectorAll('a[rel="nofollow"]');
         links.forEach(link => {
-          const reviewUrl = link.getAttribute('href');
-          // Extract book ID from the review page by checking the title attribute or fetching
-          // For now, we'll just remove the links to be safe
-          link.removeAttribute('href');
-          link.style.cursor = 'default';
-          link.style.pointerEvents = 'none';
+          // Remove href to prevent navigation to profile
+          if (link.getAttribute('href') && link.getAttribute('href').includes('goodreads.com')) {
+            link.removeAttribute('href');
+            link.style.cursor = 'default';
+            link.style.textDecoration = 'none';
+          }
         });
+        
+        // Keep the "powered by goodreads" footer link functional
+        const poweredByLink = readingWidget.querySelector('.goodreads-footer a');
+        if (poweredByLink) {
+          poweredByLink.style.cursor = 'pointer';
+          poweredByLink.style.textDecoration = 'underline';
+        }
       }
     }
     
